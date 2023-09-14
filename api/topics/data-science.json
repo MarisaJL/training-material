@@ -190,11 +190,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://galaxy.mesocentre.uca.fr",
-            "name": "Galaxy@AuBi",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://galaxy.genouest.org",
             "name": "Galaxy@GenOuest",
             "usegalaxy": "false"
@@ -240,8 +235,9 @@
             "usegalaxy": "false"
           },
           {
-            "url": "https://galaxy.bio.di.uminho.pt/",
-            "name": "PhagePromotor"
+            "url": "https://usegalaxy.be/",
+            "name": "UseGalaxy.be",
+            "usegalaxy": "true"
           },
           {
             "url": "https://usegalaxy.no/",
