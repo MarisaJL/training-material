@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@ccccd1fb4d0598ecdaabad8b57a5835f5cd13dcf",
+  release: "galaxy-training-network@354afd9e01e78600e4f5cd5d6df5b5a9186ffe2a",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695602174' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695602174' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695645601' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695645601' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -68,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1695602174'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1695645601'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -226,8 +226,6 @@ Sentry.init({
 <section class="tutorials-list single-cell topic-type-use">
     <h1>Single Cell</h1>
     <p><p>Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). When you generate your lovely gene lists for your cells, consider checking out our Transcriptomics tutorials for further network analysis!</p>
-
-<p class="alert alert-success">What else do you want to see? You can submit tool and/or tutorial requests through an Issue, as well as up-vote requests from others at our <a href="https://github.com/nomadscientist/single-cell-galaxy/issues">Single Cell Community Tool Request Site</a>.</p>
 </p>
     <i>You can view the tutorial materials in different languages by clicking the dropdown icon next to the slides (<i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>) and tutorial (<i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>) buttons below. </i>
 
@@ -306,9 +304,9 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00eadf; --color-darker: #00d0c6; --color-dimmed: #00ddd2;" title="Click to show all tutorials tagged español">español</a>
+              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f9ed; --color-darker: #00ded3; --color-dimmed: #00ece0;" title="Click to show all tutorials tagged español">español</a>
               
             
             </div>
@@ -721,7 +719,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
             
             </div>
@@ -994,7 +992,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
             
             </div>
@@ -1454,11 +1452,731 @@ Sentry.init({
 
 
     
-        <!-- subtopic = [single-cell-CS, {subtopic => {"id"=>"single-cell-CS", "title"=>"Case study", "description"=>"These tutorials take you from raw scRNA sequencing reads to inferred trajectories to replicate a published analysis. Note you have two different options for trajectory analysis - Scanpy in Python/Jupyter Notebook, or Monocle3 in the Galaxy user interface."}, materials => [ ... ]} ] -->
+        <!-- subtopic = [firstsc, {subtopic => {"id"=>"firstsc", "title"=>"Your first analysis", "description"=>"Start here if you are new to single cell analysis in Galaxy"}, materials => [ ... ]} ] -->
+
+        
+        <h3 id="st-firstsc">Your first analysis</h3>
+        <p>Start here if you are new to single cell analysis in Galaxy</p>
+        
+
+        <table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lesson</th>
+      <th scope="col" title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th scope="col" title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th scope="col" title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
+
+      
+      <th scope="col" title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th scope="col" title="Galaxy workflows used in this tutorial.">Workflows</th>
+      
+
+      
+    </tr>
+  </thead>
+  <tbody class="list">
+
+  
+  
+        <!-- MAT: single-cell/scrna-preprocessing-tenx -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html">
+                Pre-processing of 10X Single-Cell RNA Datasets
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-preprocessing-tenx/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (May 2023)
+            </a>
+        </li>
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+
+
+              
+                  
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3457880">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell RNA Datasets workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-preprocessing-tenx/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (May 2023)
+            </a>
+        </li>
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+ </td>
+
+          
+          <td> 
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3457880">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell RNA Datasets workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+        <!-- MAT: single-cell/scrna-scanpy-pbmc3k -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html">
+                Clustering 3K PBMCs with Scanpy
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-scanpy-pbmc3k/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (March 2021)
+            </a>
+        </li>
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+
+
+              
+                  
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3581213">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/workflows/" title="Clustering 3K PBMCs with Scanpy workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-scanpy-pbmc3k/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (March 2021)
+            </a>
+        </li>
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+ </td>
+
+          
+          <td> 
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3581213">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/workflows/" title="Clustering 3K PBMCs with Scanpy workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+  </tbody>
+</table>
+
+
+
+
+    
+        <!-- subtopic = [single-cell-CS, {subtopic => {"id"=>"single-cell-CS", "title"=>"Case study", "description"=>"These tutorials take you from raw scRNA sequencing reads to inferred trajectories to replicate a published analysis. The data is messy. The decisions are tough. The interpretation is meaningful. Come here to advance your single cell skills! Note that you get two options for inferring trajectories."}, materials => [ ... ]} ] -->
 
         
         <h3 id="st-single-cell-cs">Case study</h3>
-        <p>These tutorials take you from raw scRNA sequencing reads to inferred trajectories to replicate a published analysis. Note you have two different options for trajectory analysis - Scanpy in Python/Jupyter Notebook, or Monocle3 in the Galaxy user interface.</p>
+        <p>These tutorials take you from raw scRNA sequencing reads to inferred trajectories to replicate a published analysis. The data is messy. The decisions are tough. The interpretation is meaningful. Come here to advance your single cell skills! Note that you get two options for inferring trajectories.</p>
         
 
         <table class="table table-responsive table-striped">
@@ -1498,15 +2216,15 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00eadf; --color-darker: #00d0c6; --color-dimmed: #00ddd2;" title="Click to show all tutorials tagged español">español</a>
+              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f9ed; --color-darker: #00ded3; --color-dimmed: #00ece0;" title="Click to show all tutorials tagged español">español</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -1809,15 +2527,15 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00eadf; --color-darker: #00d0c6; --color-dimmed: #00ddd2;" title="Click to show all tutorials tagged español">español</a>
+              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f9ed; --color-darker: #00ded3; --color-dimmed: #00ece0;" title="Click to show all tutorials tagged español">español</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -2120,15 +2838,15 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00eadf; --color-darker: #00d0c6; --color-dimmed: #00ddd2;" title="Click to show all tutorials tagged español">español</a>
+              <a href="/training-material/search?query=español" class="label label-default tutorial_tag" style="--color-primary: #00f9ed; --color-darker: #00ded3; --color-dimmed: #00ece0;" title="Click to show all tutorials tagged español">español</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -2414,6 +3132,447 @@ Sentry.init({
          </tr>
        
     
+        <!-- MAT: single-cell/scrna-case_monocle3-trajectories -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
+                Inferring trajectories using Monocle3
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
+              
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+        
+        
+
+        <li>
+
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-case_monocle3-trajectories" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (April 2023)
+            </a>
+        </li>
+        
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+
+
+              
+                  
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7078524">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/workflows/" title="Inferring trajectories using Monocle3 workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+<div class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+</div>
+    <div class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Français
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Español
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                Português
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+		</li>
+        
+		<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+		</li>
+
+	<li class="dropdown-item">
+	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+	</li>
+    </ul>
+</div>
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- GTN Video Library  -->
+  
+<div class="btn-group">
+  
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+        
+        
+
+        <li>
+
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-case_monocle3-trajectories" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (April 2023)
+            </a>
+        </li>
+        
+        
+        
+        
+        
+    </ul>
+  
+</div>
+  
+   
+ </td>
+
+          
+          <td> 
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7078524">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/workflows/" title="Inferring trajectories using Monocle3 workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+  </tbody>
+</table>
+
+
+
+
+    
+        <!-- subtopic = [single-cell-CS-code, {subtopic => {"id"=>"single-cell-CS-code", "title"=>"Case study: Reloaded", "description"=>"These tutorials let you follow the same case study analysis of real, messy data but in a programming environment, hosted on Galaxy. So if you want more flexibility, but the same guided steps as the Case Study, you can skip the Case Study and start here instead. Alternatively, try these after completing the Case Study for an easier jump to a coding environment."}, materials => [ ... ]} ] -->
+
+        
+        <h3 id="st-single-cell-cs-code">Case study: Reloaded</h3>
+        <p>These tutorials let you follow the same case study analysis of real, messy data but in a programming environment, hosted on Galaxy. So if you want more flexibility, but the same guided steps as the Case Study, you can skip the Case Study and start here instead. Alternatively, try these after completing the Case Study for an easier jump to a coding environment.</p>
+        
+
+        <table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lesson</th>
+      <th scope="col" title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th scope="col" title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th scope="col" title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
+
+      
+      <th scope="col" title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th scope="col" title="Galaxy workflows used in this tutorial.">Workflows</th>
+      
+
+      
+    </tr>
+  </thead>
+  <tbody class="list">
+
+  
+  
         <!-- MAT: single-cell/scrna-case-jupyter_basic-pipeline -->
       
 
@@ -2431,15 +3590,15 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
-              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00e7f9; --color-darker: #00cede; --color-dimmed: #00daec;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
+              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #7df0ff; --color-darker: #00dbed; --color-dimmed: #00e9fb;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
               
             
             </div>
@@ -2654,19 +3813,19 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffc4b1; --color-darker: #ffa47e; --color-dimmed: #ffb499;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
+              <a href="/training-material/search?query=interactive-tools" class="label label-default tutorial_tag" style="--color-primary: #ffd7cb; --color-darker: #ffb69b; --color-dimmed: #ffc6b4;" title="Click to show all tutorials tagged interactive-tools">interactive-tools</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
-              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00e7f9; --color-darker: #00cede; --color-dimmed: #00daec;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
+              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #7df0ff; --color-darker: #00dbed; --color-dimmed: #00e9fb;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
               
-              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00e7f9; --color-darker: #00cede; --color-dimmed: #00daec;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
+              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #7df0ff; --color-darker: #00dbed; --color-dimmed: #00e9fb;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
               
             
             </div>
@@ -2914,413 +4073,6 @@ Sentry.init({
  </td>
           <td> 
 
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/scrna-case_monocle3-trajectories -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-                Inferring trajectories using Monocle3
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
-              
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
-              
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-<div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
-</div>
-    <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides.html" title="Slides">
-            <i class="fab fa-slideshare" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-
-        <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-		</li>
-
-	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">
-		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
-	</a>
-	</li>
-    </ul>
-</div>
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-        
-        
-
-        <li>
-
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-case_monocle3-trajectories" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (April 2023)
-            </a>
-        </li>
-        
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
-
-
-              
-                  
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7078524">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/workflows/" title="Inferring trajectories using Monocle3 workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-<div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
-</div>
-    <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides.html" title="Slides">
-            <i class="fab fa-slideshare" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-
-        <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Fslides.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-		</li>
-
-	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/slides-plain.html" aria-label="more accessible, plain text slides">
-		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
-	</a>
-	</li>
-    </ul>
-</div>
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-case_monocle3-trajectories%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-        
-        
-
-        <li>
-
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-case_monocle3-trajectories" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (April 2023)
-            </a>
-        </li>
-        
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
- </td>
-
-          
-          <td> 
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7078524">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/workflows/" title="Inferring trajectories using Monocle3 workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
 
  </td>
           
@@ -3346,15 +4098,15 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=trajectory-analysis" class="label label-default tutorial_tag" style="--color-primary: #00eea7; --color-darker: #00d494; --color-dimmed: #00e19d;" title="Click to show all tutorials tagged trajectory-analysis">trajectory-analysis</a>
+              <a href="/training-material/search?query=trajectory-analysis" class="label label-default tutorial_tag" style="--color-primary: #00feb2; --color-darker: #00e29e; --color-dimmed: #00f0a8;" title="Click to show all tutorials tagged trajectory-analysis">trajectory-analysis</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
-              <a href="/training-material/search?query=rmarkdown-notebook" class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;" title="Click to show all tutorials tagged rmarkdown-notebook">rmarkdown-notebook</a>
+              <a href="/training-material/search?query=rmarkdown-notebook" class="label label-default tutorial_tag" style="--color-primary: #e6daff; --color-darker: #d2bcff; --color-dimmed: #dccbff;" title="Click to show all tutorials tagged rmarkdown-notebook">rmarkdown-notebook</a>
               
-              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #00e7f9; --color-darker: #00cede; --color-dimmed: #00daec;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
+              <a href="/training-material/search?query=jupyter-notebook" class="label label-default tutorial_tag" style="--color-primary: #7df0ff; --color-darker: #00dbed; --color-dimmed: #00e9fb;" title="Click to show all tutorials tagged jupyter-notebook">jupyter-notebook</a>
               
             
             </div>
@@ -3603,17 +4355,17 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=mouse" class="label label-default tutorial_tag" style="--color-primary: #00ecc2; --color-darker: #00d2ad; --color-dimmed: #00dfb7;" title="Click to show all tutorials tagged mouse">mouse</a>
+              <a href="/training-material/search?query=mouse" class="label label-default tutorial_tag" style="--color-primary: #00fccf; --color-darker: #00e0b8; --color-dimmed: #00eec4;" title="Click to show all tutorials tagged mouse">mouse</a>
               
-              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffc3bf; --color-darker: #ffa19a; --color-dimmed: #ffb3ad;" title="Click to show all tutorials tagged human">human</a>
+              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffd6d4; --color-darker: #ffb4ae; --color-dimmed: #ffc5c2;" title="Click to show all tutorials tagged human">human</a>
               
-              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
+              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
               
-              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged bulk">bulk</a>
+              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged bulk">bulk</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -3867,460 +4619,6 @@ Sentry.init({
 
 
     <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music/workflows/" title="Bulk RNA Deconvolution with MuSiC workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/bulk-music-2-preparescref -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html">
-                Creating the single-cell RNA-seq reference dataset for deconvolution
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffc3bf; --color-darker: #ffa19a; --color-dimmed: #ffb3ad;" title="Click to show all tutorials tagged human">human</a>
-              
-              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
-              
-              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged bulk">bulk</a>
-              
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-              
-                  
-
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/workflows/" title="Creating the single-cell RNA-seq reference dataset for deconvolution workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
- </td>
-
-          
-          <td> 
-
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/workflows/" title="Creating the single-cell RNA-seq reference dataset for deconvolution workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/bulk-music-3-preparebulk -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-                Creating the bulk RNA-seq dataset for deconvolution
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffc3bf; --color-darker: #ffa19a; --color-dimmed: #ffb3ad;" title="Click to show all tutorials tagged human">human</a>
-              
-              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
-              
-              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged bulk">bulk</a>
-              
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-              
-                  
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7319173">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/workflows/" title="Creating the bulk RNA-seq dataset for deconvolution workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
- </td>
-
-          
-          <td> 
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7319173">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/workflows/" title="Creating the bulk RNA-seq dataset for deconvolution workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
@@ -4348,17 +4646,17 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=mouse" class="label label-default tutorial_tag" style="--color-primary: #00ecc2; --color-darker: #00d2ad; --color-dimmed: #00dfb7;" title="Click to show all tutorials tagged mouse">mouse</a>
+              <a href="/training-material/search?query=mouse" class="label label-default tutorial_tag" style="--color-primary: #00fccf; --color-darker: #00e0b8; --color-dimmed: #00eec4;" title="Click to show all tutorials tagged mouse">mouse</a>
               
-              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffc3bf; --color-darker: #ffa19a; --color-dimmed: #ffb3ad;" title="Click to show all tutorials tagged human">human</a>
+              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffd6d4; --color-darker: #ffb4ae; --color-dimmed: #ffc5c2;" title="Click to show all tutorials tagged human">human</a>
               
-              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
+              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
               
-              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #79ec00; --color-darker: #6bd200; --color-dimmed: #72df00;" title="Click to show all tutorials tagged bulk">bulk</a>
+              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged bulk">bulk</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -4571,10 +4869,10 @@ Sentry.init({
 
 
     
-        <!-- subtopic = [end-to-end, {subtopic => {"id"=>"end-to-end", "title"=>"End-to-end Analyses", "description"=>"These tutorials use different methods to analyse scRNA-seq samples"}, materials => [ ... ]} ] -->
+        <!-- subtopic = [end-to-end, {subtopic => {"id"=>"end-to-end", "title"=>"End-to-end scRNA-seq Analyses", "description"=>"These tutorials use different methods to analyse scRNA-seq samples"}, materials => [ ... ]} ] -->
 
         
-        <h3 id="st-end-to-end">End-to-end Analyses</h3>
+        <h3 id="st-end-to-end">End-to-end scRNA-seq Analyses</h3>
         <p>These tutorials use different methods to analyse scRNA-seq samples</p>
         
 
@@ -4615,7 +4913,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
             
             </div>
@@ -4958,7 +5256,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
             
             </div>
@@ -5154,917 +5452,6 @@ Sentry.init({
 
 
     <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-raceid/workflows/" title="Downstream Single-cell RNA analysis with RaceID workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/scatac-preprocessing-tenx -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html">
-                Pre-processing of 10X Single-Cell ATAC-seq Datasets
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-              
-                  
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7855968">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell ATAC-seq Datasets workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
- </td>
-
-          
-          <td> 
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7855968">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell ATAC-seq Datasets workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/scrna-preprocessing-tenx -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html">
-                Pre-processing of 10X Single-Cell RNA Datasets
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-
-        
-        
-        
-
-        <li>
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-preprocessing-tenx/tutorial" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (May 2023)
-            </a>
-        </li>
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
-
-
-              
-                  
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3457880">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell RNA Datasets workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-
-        
-        
-        
-
-        <li>
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-preprocessing-tenx/tutorial" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (May 2023)
-            </a>
-        </li>
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
- </td>
-
-          
-          <td> 
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3457880">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell RNA Datasets workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
- </td>
-          
-
-          
-         </tr>
-       
-    
-        <!-- MAT: single-cell/scrna-scanpy-pbmc3k -->
-      
-
-        <tr>
-          <td class="tutorial_title">
-            
-            
-            <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html">
-                Clustering 3K PBMCs with Scanpy
-            </a>
-            
-
-
-            <div class="extra">
-            
-            
-              
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
-              
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
-              
-            
-            </div>
-
-            <div class="duplicate">
-              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
-              
-
-
-<div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
-</div>
-    <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides.html" title="Slides">
-            <i class="fab fa-slideshare" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-
-        <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-		</li>
-
-	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">
-		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
-	</a>
-	</li>
-    </ul>
-</div>
-
-
-<!-- video slides -->
-
-
-              
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-
-        
-        
-        
-
-        <li>
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-scanpy-pbmc3k/tutorial" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (March 2021)
-            </a>
-        </li>
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
-
-
-              
-                  
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3581213">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
-
-                  
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/workflows/" title="Clustering 3K PBMCs with Scanpy workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i>
-    </a>
-
-
-              
-
-              
-              </div>
-            </div>
-          </td>
-
-          <td> 
-
-
-<div class="btn-group">
-	<a class="visually-hidden" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
-</div>
-    <div class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides.html" title="Slides">
-            <i class="fab fa-slideshare" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-
-        <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-		</li>
-        
-		<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Fslides.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-		</li>
-
-	<li class="dropdown-item">
-	<a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/slides-plain.html" aria-label="more accessible, plain text slides">
-		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
-	</a>
-	</li>
-    </ul>
-</div>
-
-
-<!-- video slides -->
-
- </td>
-          <td> 
-    <div class="btn-group">
-        <a href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-        
-         <li class="dropdown-item"><strong>Automatic translations</strong></li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-	</li>
-        
-	<li class="dropdown-item">
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscrna-scanpy-pbmc3k%2Ftutorial.html&edit-text=&act=url" title="">
-            More Languages
-        </a>
-	</li>
-    </ul>
-</div>
-
- </td>
-          <td> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- GTN Video Library  -->
-  
-<div class="btn-group">
-  
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
-        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
-    </a>
-    <ul class="dropdown-menu">
-        
-        
-
-        
-        
-        
-
-        <li>
-            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/single-cell/scrna-scanpy-pbmc3k/tutorial" title="View GTN Video Library for this Tutorial">
-                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (March 2021)
-            </a>
-        </li>
-        
-        
-        
-        
-    </ul>
-  
-</div>
-  
-   
- </td>
-
-          
-          <td> 
-
-
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3581213">
-    <i class="far fa-copy" aria-hidden="true"></i>
-</a>
-
- </td>
-          <td> 
-
-
-    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/workflows/" title="Clustering 3K PBMCs with Scanpy workflows">
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
@@ -6092,11 +5479,11 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=plants" class="label label-default tutorial_tag" style="--color-primary: #6ced00; --color-darker: #60d300; --color-dimmed: #66e000;" title="Click to show all tutorials tagged plants">plants</a>
+              <a href="/training-material/search?query=plants" class="label label-default tutorial_tag" style="--color-primary: #74fd00; --color-darker: #67e100; --color-dimmed: #6def00;" title="Click to show all tutorials tagged plants">plants</a>
               
-              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00e9e6; --color-darker: #00d0cd; --color-dimmed: #00dcd9;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
+              <a href="/training-material/search?query=paper-replication" class="label label-default tutorial_tag" style="--color-primary: #00f9f6; --color-darker: #00ddda; --color-dimmed: #00ebe8;" title="Click to show all tutorials tagged paper-replication">paper-replication</a>
               
             
             </div>
@@ -6367,6 +5754,753 @@ Sentry.init({
 
 
     
+        <!-- subtopic = [scmultiomics, {subtopic => {"id"=>"scmultiomics", "title"=>"Multiomic Analyses", "description"=>"This section lets you build on mere scRNA analyses into a multiomic future!"}, materials => [ ... ]} ] -->
+
+        
+        <h3 id="st-scmultiomics">Multiomic Analyses</h3>
+        <p>This section lets you build on mere scRNA analyses into a multiomic future!</p>
+        
+
+        <table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lesson</th>
+      <th scope="col" title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th scope="col" title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th scope="col" title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
+
+      
+      <th scope="col" title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th scope="col" title="Galaxy workflows used in this tutorial.">Workflows</th>
+      
+
+      
+    </tr>
+  </thead>
+  <tbody class="list">
+
+  
+  
+        <!-- MAT: single-cell/scatac-preprocessing-tenx -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html">
+                Pre-processing of 10X Single-Cell ATAC-seq Datasets
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+              
+                  
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7855968">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell ATAC-seq Datasets workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fscatac-preprocessing-tenx%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ </td>
+
+          
+          <td> 
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7855968">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/workflows/" title="Pre-processing of 10X Single-Cell ATAC-seq Datasets workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+  </tbody>
+</table>
+
+
+
+
+    
+        <!-- subtopic = [datamanipulation, {subtopic => {"id"=>"datamanipulation", "title"=>"Changing data formats & preparing objects", "description"=>"These tutorials cover a range of needs for importing data from different sources, to changing data into different formats to move from one analysis to the other."}, materials => [ ... ]} ] -->
+
+        
+        <h3 id="st-datamanipulation">Changing data formats & preparing objects</h3>
+        <p>These tutorials cover a range of needs for importing data from different sources, to changing data into different formats to move from one analysis to the other.</p>
+        
+
+        <table class="table table-responsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lesson</th>
+      <th scope="col" title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th scope="col" title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th scope="col" title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
+
+      
+      <th scope="col" title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th scope="col" title="Galaxy workflows used in this tutorial.">Workflows</th>
+      
+
+      
+    </tr>
+  </thead>
+  <tbody class="list">
+
+  
+  
+        <!-- MAT: single-cell/bulk-music-2-preparescref -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html">
+                Matrix Exchange Format to ESet | Creating a single-cell RNA-seq reference dataset for deconvolution
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffd6d4; --color-darker: #ffb4ae; --color-dimmed: #ffc5c2;" title="Click to show all tutorials tagged human">human</a>
+              
+              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
+              
+              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged bulk">bulk</a>
+              
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+              
+                  
+
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/workflows/" title="Matrix Exchange Format to ESet | Creating a single-cell RNA-seq reference dataset for deconvolution workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-2-preparescref%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ </td>
+
+          
+          <td> 
+
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/workflows/" title="Matrix Exchange Format to ESet | Creating a single-cell RNA-seq reference dataset for deconvolution workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+        <!-- MAT: single-cell/bulk-music-3-preparebulk -->
+      
+
+        <tr>
+          <td class="tutorial_title">
+            
+            
+            <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
+                Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+            </a>
+            
+
+
+            <div class="extra">
+            
+            
+              
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              
+              <a href="/training-material/search?query=human" class="label label-default tutorial_tag" style="--color-primary: #ffd6d4; --color-darker: #ffb4ae; --color-dimmed: #ffc5c2;" title="Click to show all tutorials tagged human">human</a>
+              
+              <a href="/training-material/search?query=deconvolution" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged deconvolution">deconvolution</a>
+              
+              <a href="/training-material/search?query=bulk" class="label label-default tutorial_tag" style="--color-primary: #82fc00; --color-darker: #72e000; --color-dimmed: #7aee00;" title="Click to show all tutorials tagged bulk">bulk</a>
+              
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              
+            
+            </div>
+
+            <div class="duplicate">
+              <div class="btn-group" role="group" aria-label="Supporting materials for this resource">
+              
+
+
+
+<!-- video slides -->
+
+
+              
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+              
+                  
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7319173">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+
+                  
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/workflows/" title="Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+
+              
+
+              
+              </div>
+            </div>
+          </td>
+
+          <td> 
+
+
+
+<!-- video slides -->
+
+ </td>
+          <td> 
+    <div class="btn-group">
+        <a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+         <li class="dropdown-item"><strong>Automatic translations</strong></li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+	</li>
+        
+	<li class="dropdown-item">
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fsingle-cell%2Ftutorials%2Fbulk-music-3-preparebulk%2Ftutorial.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+	</li>
+    </ul>
+</div>
+
+ </td>
+          <td> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ </td>
+
+          
+          <td> 
+
+
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/7319173">
+    <i class="far fa-copy" aria-hidden="true"></i>
+</a>
+
+ </td>
+          <td> 
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/workflows/" title="Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+    </a>
+
+ </td>
+          
+
+          
+         </tr>
+       
+    
+  </tbody>
+</table>
+
+
+
+
+    
         <!-- subtopic = [tricks, {subtopic => {"id"=>"tricks", "title"=>"Tips, tricks & other hints", "description"=>"These tutorials cover helpful skills for scRNA-seq analysis"}, materials => [ ... ]} ] -->
 
         
@@ -6411,7 +6545,7 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
             
             </div>
@@ -6634,11 +6768,11 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffc2ca; --color-darker: #ff9fae; --color-dimmed: #ffb1bc;" title="Click to show all tutorials tagged 10x">10x</a>
+              <a href="/training-material/search?query=10x" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged 10x">10x</a>
               
-              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
+              <a href="/training-material/search?query=transcriptomics" class="label label-default tutorial_tag" style="--color-primary: #f6e200; --color-darker: #dbc900; --color-dimmed: #e8d600;" title="Click to show all tutorials tagged transcriptomics">transcriptomics</a>
               
             
             </div>
@@ -6919,9 +7053,9 @@ Sentry.init({
             
             
               
-              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;" title="Click to show all tutorials tagged single-cell">single-cell</a>
+              <a href="/training-material/search?query=single-cell" class="label label-default tutorial_tag" style="--color-primary: #00fae7; --color-darker: #00decd; --color-dimmed: #00ecda;" title="Click to show all tutorials tagged single-cell">single-cell</a>
               
-              <a href="/training-material/search?query=tips&tricks" class="label label-default tutorial_tag" style="--color-primary: #ffc880; --color-darker: #f5ad00; --color-dimmed: #ffb93e;" title="Click to show all tutorials tagged tips&tricks">tips&tricks</a>
+              <a href="/training-material/search?query=tips&tricks" class="label label-default tutorial_tag" style="--color-primary: #ffd9b0; --color-darker: #ffba45; --color-dimmed: #ffca86;" title="Click to show all tutorials tagged tips&tricks">tips&tricks</a>
               
             
             </div>
@@ -7168,7 +7302,7 @@ Sentry.init({
     <h2 id="contributors">Contributors</h2>
     <p>This material was contributed to by:</p>
     
-    <a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge contributor-blankenberg"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/blankenberg?s=36" alt="Avatar" width="36" height="36">Daniel Blankenberg</a><a href="/training-material/hall-of-fame/hexhowells/" class="contributor-badge contributor-hexhowells"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexhowells?s=36" alt="Avatar" width="36" height="36">Morgan Howells</a><a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar" width="36" height="36">Nicola Soranzo</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar" width="36" height="36">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/wee-snufkin/" class="contributor-badge contributor-wee-snufkin"><img src="https://avatars.githubusercontent.com/wee-snufkin?s=36" alt="Avatar" width="36" height="36">Julia Jakiela</a><a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Avatar" width="36" height="36">Wendi Bacon</a><a href="/training-material/hall-of-fame/pinin4fjords/" class="contributor-badge contributor-pinin4fjords"><img src="https://avatars.githubusercontent.com/pinin4fjords?s=36" alt="Avatar" width="36" height="36">Jonathan Manning</a><a href="/training-material/hall-of-fame/wm75/" class="contributor-badge contributor-wm75"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/wm75?s=36" alt="Avatar" width="36" height="36">Wolfgang Maier</a><a href="/training-material/hall-of-fame/ethering/" class="contributor-badge contributor-ethering"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/ethering?s=36" alt="Avatar" width="36" height="36">Graham Etherington</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/hrhotz/" class="contributor-badge contributor-hrhotz"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hrhotz?s=36" alt="Avatar" width="36" height="36">Hans-Rudolf Hotz</a><a href="/training-material/hall-of-fame/erxleben/" class="contributor-badge contributor-erxleben"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/erxleben?s=36" alt="Avatar" width="36" height="36">Anika Erxleben</a><a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=36" alt="Avatar" width="36" height="36">Mehmet Tekman</a><a href="/training-material/hall-of-fame/pavanvidem/" class="contributor-badge contributor-pavanvidem"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/pavanvidem?s=36" alt="Avatar" width="36" height="36">Pavankumar Videm</a><a href="/training-material/hall-of-fame/hrukkudyr/" class="contributor-badge contributor-hrukkudyr"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hrukkudyr?s=36" alt="Avatar" width="36" height="36">Graeme Tyson</a><a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=36" alt="Avatar" width="36" height="36">Beatriz Serrano-Solano</a><a href="/training-material/hall-of-fame/MarisaJL/" class="contributor-badge contributor-MarisaJL"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/MarisaJL?s=36" alt="Avatar" width="36" height="36">Marisa Loach</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Avatar" width="36" height="36">Alex Ostrovsky</a>
+    <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar" width="36" height="36">Nicola Soranzo</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Avatar" width="36" height="36">Alex Ostrovsky</a><a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge contributor-blankenberg"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/blankenberg?s=36" alt="Avatar" width="36" height="36">Daniel Blankenberg</a><a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=36" alt="Avatar" width="36" height="36">Mehmet Tekman</a><a href="/training-material/hall-of-fame/hexhowells/" class="contributor-badge contributor-hexhowells"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexhowells?s=36" alt="Avatar" width="36" height="36">Morgan Howells</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a><a href="/training-material/hall-of-fame/wee-snufkin/" class="contributor-badge contributor-wee-snufkin"><img src="https://avatars.githubusercontent.com/wee-snufkin?s=36" alt="Avatar" width="36" height="36">Julia Jakiela</a><a href="/training-material/hall-of-fame/hrhotz/" class="contributor-badge contributor-hrhotz"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hrhotz?s=36" alt="Avatar" width="36" height="36">Hans-Rudolf Hotz</a><a href="/training-material/hall-of-fame/erxleben/" class="contributor-badge contributor-erxleben"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/erxleben?s=36" alt="Avatar" width="36" height="36">Anika Erxleben</a><a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Avatar" width="36" height="36">Wendi Bacon</a><a href="/training-material/hall-of-fame/MarisaJL/" class="contributor-badge contributor-MarisaJL"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/MarisaJL?s=36" alt="Avatar" width="36" height="36">Marisa Loach</a><a href="/training-material/hall-of-fame/wm75/" class="contributor-badge contributor-wm75"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/wm75?s=36" alt="Avatar" width="36" height="36">Wolfgang Maier</a><a href="/training-material/hall-of-fame/ethering/" class="contributor-badge contributor-ethering"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/ethering?s=36" alt="Avatar" width="36" height="36">Graham Etherington</a><a href="/training-material/hall-of-fame/pinin4fjords/" class="contributor-badge contributor-pinin4fjords"><img src="https://avatars.githubusercontent.com/pinin4fjords?s=36" alt="Avatar" width="36" height="36">Jonathan Manning</a><a href="/training-material/hall-of-fame/pavanvidem/" class="contributor-badge contributor-pavanvidem"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/pavanvidem?s=36" alt="Avatar" width="36" height="36">Pavankumar Videm</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/hrukkudyr/" class="contributor-badge contributor-hrukkudyr"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hrukkudyr?s=36" alt="Avatar" width="36" height="36">Graeme Tyson</a><a href="/training-material/hall-of-fame/beatrizserrano/" class="contributor-badge contributor-beatrizserrano"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/beatrizserrano?s=36" alt="Avatar" width="36" height="36">Beatriz Serrano-Solano</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar" width="36" height="36">Cristóbal Gallardo</a>
 
     <h2 id="funders">Funders</h2>
     <p>This material was funded by:</p>
@@ -7207,7 +7341,7 @@ Sentry.init({
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/ccccd1fb4d0598ecdaabad8b57a5835f5cd13dcf">ccccd1f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/354afd9e01e78600e4f5cd5d6df5b5a9186ffe2a">354afd9</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -7235,7 +7369,7 @@ Sentry.init({
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1695602174'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1695645601'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
