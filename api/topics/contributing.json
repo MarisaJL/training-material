@@ -1646,11 +1646,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://cpt.tamu.edu/galaxy-public/",
-            "name": "Center for Phage Technology (CPT)",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://galaxy.genouest.org",
             "name": "Galaxy@GenOuest",
             "usegalaxy": "false"
