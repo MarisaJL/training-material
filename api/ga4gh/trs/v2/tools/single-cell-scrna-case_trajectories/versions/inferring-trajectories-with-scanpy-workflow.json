@@ -1,5 +1,5 @@
 {
-  "id": "main_workflow",
+  "id": "inferring-trajectories-with-scanpy-workflow",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.html",
   "name": "v1",
   "author": [

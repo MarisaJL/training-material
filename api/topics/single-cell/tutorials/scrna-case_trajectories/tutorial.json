@@ -55,13 +55,13 @@
   "slides": false,
   "workflows": [
     {
-      "workflow": "main_workflow.ga",
+      "workflow": "inferring-trajectories-with-scanpy-workflow.ga",
       "tests": false,
-      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_trajectories/workflows/main_workflow.ga",
-      "path": "topics/single-cell/tutorials/scrna-case_trajectories/workflows/main_workflow.ga",
+      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_trajectories/workflows/inferring-trajectories-with-scanpy-workflow.ga",
+      "path": "topics/single-cell/tutorials/scrna-case_trajectories/workflows/inferring-trajectories-with-scanpy-workflow.ga",
       "wfid": "single-cell-scrna-case_trajectories",
-      "wfname": "main_workflow",
-      "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-case_trajectories/versions/main_workflow",
+      "wfname": "inferring-trajectories-with-scanpy-workflow",
+      "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-case_trajectories/versions/inferring-trajectories-with-scanpy-workflow",
       "license": "CC-BY-4.0",
       "creators": [
         {
