@@ -40,8 +40,8 @@ gtn_project_years_total 8.252054794520548
 tutorial_update_age_days{le="1"} 2
 tutorial_update_age_days{le="7"} 12
 tutorial_update_age_days{le="28"} 6
-tutorial_update_age_days{le="90"} 18
-tutorial_update_age_days{le="365"} 323
+tutorial_update_age_days{le="90"} 16
+tutorial_update_age_days{le="365"} 325
 tutorial_update_age_days{le="730"} 4
 tutorial_update_age_days{le="1095"} 0
 tutorial_update_age_days{le="+Inf"} 1
