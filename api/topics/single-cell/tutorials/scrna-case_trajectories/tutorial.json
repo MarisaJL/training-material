@@ -53,6 +53,25 @@
   },
   "hands_on": true,
   "slides": false,
+  "workflows": [
+    {
+      "workflow": "main_workflow.ga",
+      "tests": false,
+      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_trajectories/workflows/main_workflow.ga",
+      "path": "topics/single-cell/tutorials/scrna-case_trajectories/workflows/main_workflow.ga",
+      "wfid": "single-cell-scrna-case_trajectories",
+      "wfname": "main_workflow",
+      "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-case_trajectories/versions/main_workflow",
+      "license": "CC-BY-4.0",
+      "creators": [
+        {
+          "class": "Organization",
+          "name": "Marisa Loach"
+        }
+      ],
+      "test_results": null
+    }
+  ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.json",
   "tools": [
     "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy9",

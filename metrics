@@ -16,7 +16,7 @@ gtn_pages_total{layout="training_philosophy"} 6
 gtn_pages_total{layout="tutorial_hands_on"} 366
 gtn_pages_total{layout="tutorial_slides"} 96
 gtn_pages_total{layout="tutorial_slides_ai4life"} 3
-gtn_pages_total{layout="workflow-list"} 188
+gtn_pages_total{layout="workflow-list"} 189
 
 # HELP gtn_contributors_total Total number of Contributors
 # TYPE gtn_contributors_total counter
