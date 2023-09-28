@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@a588e2f52c4085da21f3e6596c48ac203e4991ee",
+  release: "galaxy-training-network@2323f02e314af85105eb8ee7a4cfa19b4237aae8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695926280' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695926280' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695928086' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695928086' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-09-28 18:36:31 +0000">
+<meta name="DC.date" content="2023-09-28 19:06:44 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-09-28 18:36:31 +0000",
+  "dateModified": "2023-09-28 19:06:44 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1695926280'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1695928086'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -1043,11 +1043,9 @@ Sentry.init({
 
         <p>We’re using the fa or ForceAtlas2 layout for our FDGs. It is the same layout used in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html">Jupyter notebook version of this tutorial</a> and works well for our data. As well as choosing the fa layout when we create the FDGs, we will also specify the <code class="language-plaintext highlighter-rouge">draw_graph_fa</code> embedding when drawing the plots.</p>
       </blockquote>
-      <blockquote>
-
-      </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h2 id="plot-the-fdg">Plot the FDG</h2>
@@ -1171,9 +1169,7 @@ Sentry.init({
     <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>Oh dear! This doesn’t look great. Maybe the DP-M4 cells are a whole other trajectory? That doesn’t seem right. Saying that, this spreads out our T-mature cells, which makes a lot more sense when it comes to T-cell biology (we expect T-cells to differentiate into two types of T-cells, Cd8+Cd4- and Cd4+Cd8-). If you wanted to, you could also re-cluster your cells (since you’ve changed the neighborhood graph on which the clusterisation depends). You could use this:
-<code class="language-plaintext highlighter-rouge">sc.tl.louvain(adata, resolution=0.6)</code>
-However, we tried that, and it called far too many clusters given the depth of sequencing in this dataset. Let’s stick with our known cell types and move from there.</li>
+      <li>Oh dear! This doesn’t look great. Maybe the DP-M4 cells are a whole other trajectory? That doesn’t seem right. Saying that, this spreads out our T-mature cells, which makes a lot more sense when it comes to T-cell biology (we expect T-cells to differentiate into two types of T-cells, Cd8+Cd4- and Cd4+Cd8-). If you wanted to, you could also re-cluster your cells (since you’ve changed the neighborhood graph on which the clusterisation depends). However, we tried that, and it called far too many clusters given the depth of sequencing in this dataset. Let’s stick with our known cell types and move from there.</li>
     </ol>
 
     <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG2.png" alt="The T mature and DP L clusters have been stretched out. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> FDG Plot after recalculating neighbours from the diffusion map</figcaption></figure>
@@ -1191,7 +1187,7 @@ However, we tried that, and it called far too many clusters given the depth of s
   </li>
   <li>Everyone else:
     <ul>
-      <li>you could recluster your cells using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0" title="Scanpy FindCluster tool" aria-role="link"><strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0</span></span> at a different resolution, perhaps lower than the 0.6 we used before (Take a look at the Cell clusters step in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html tutorial if you need help with this">Filter, Plot and Explore</a>
+      <li>you could recluster your cells using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0" title="Scanpy FindCluster tool" aria-role="link"><strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0</span></span> at a different resolution, perhaps lower than the 0.6 we used before (Take a look at the Cell clusters step in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">Filter, Plot and Explore</a> tutorial if you need help with this.
         <ul>
           <li>Please note that in this case, you will want to change the PAGA step <code class="language-plaintext highlighter-rouge">sc.pl.paga</code> to group by <code class="language-plaintext highlighter-rouge">louvain</code> rather than <code class="language-plaintext highlighter-rouge">cell_type</code>. You can certainly still plot both, we only didn’t because with using our old Louvain calls, the cell_type and louvain categories are identical.</li>
         </ul>
@@ -1241,8 +1237,6 @@ However, we tried that, and it called far too many clusters given the depth of s
   </ol>
 
 </blockquote>
-
-<p><strong><em>TODO</em></strong>: <em>Consider adding a question to test the learners understanding of the previous exercise</em></p>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
@@ -1381,9 +1375,7 @@ However, we tried that, and it called far too many clusters given the depth of s
 
     <p>We’re using the EnsemblIDs during this tutorial, as discussed above. If you like, you could change the names of these plots to the gene symbols by filling in the optional Figure title field with <code class="language-plaintext highlighter-rouge">Cd4,Cd8</code>. Make sure that the order of your figure titles matches the order of the EnsemblIDs in the colour by field. ENSMUSG00000023274 is Cd4 and ENSMUSG00000053977 is Cd8.</p>
   </blockquote>
-  <blockquote>
 
-  </blockquote>
 </blockquote>
 
 <blockquote class="question">
@@ -1680,7 +1672,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/a588e2f52c4085da21f3e6596c48ac203e4991ee">a588e2f</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/2323f02e314af85105eb8ee7a4cfa19b4237aae8">2323f02</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1708,7 +1700,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1695926280'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1695928086'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
