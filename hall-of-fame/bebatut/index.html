@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@8968634ab94d0a0b5c6820fea074291ce56c18bc",
+  release: "galaxy-training-network@adb133395e900833d54d8fff9de27c56a23d4317",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695861346' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695861346' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695897650' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695897650' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -68,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1695861346'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1695897650'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -433,12 +433,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/epigenetics">
-							Epigenetics
+						<a href="/training-material/topics/statistics">
+							Statistics and machine learning
 						</a>
 						/
-						<a href="/training-material//topics/epigenetics/tutorials/estrogen-receptor-binding-site-identification/tutorial.html">
-						Identification of the binding sites of the Estrogen receptor
+						<a href="/training-material//topics/statistics/tutorials/classification_regression/tutorial.html">
+						Machine learning: classification and regression
 						</a>
 						
 						
@@ -450,12 +450,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/epigenetics">
-							Epigenetics
+						<a href="/training-material/topics/genome-annotation">
+							Genome Annotation
 						</a>
 						/
-						<a href="/training-material//topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.html">
-						Formation of the Super-Structures on the Inactive X
+						<a href="/training-material//topics/genome-annotation/tutorials/tnseq/tutorial.html">
+						Essential genes detection with Transposon insertion sequencing
 						</a>
 						
 						
@@ -484,12 +484,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/sequence-analysis">
-							Sequence analysis
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
 						</a>
 						/
-						<a href="/training-material//topics/sequence-analysis/tutorials/mapping/tutorial.html">
-						Mapping
+						<a href="/training-material//topics/galaxy-interface/tutorials/rstudio/tutorial.html">
+						RStudio in Galaxy
 						</a>
 						
 						
@@ -501,12 +501,29 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/sequence-analysis">
-							Sequence analysis
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
 						</a>
 						/
-						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/tutorial.html">
-						Quality Control
+						<a href="/training-material//topics/galaxy-interface/tutorials/history/tutorial.html">
+						Understanding Galaxy history system
+						</a>
+						
+						
+	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
+						</a>
+						/
+						<a href="/training-material//topics/transcriptomics/tutorials/clipseq/tutorial.html">
+						CLIP-Seq data analysis from pre-processing to motif detection
 						</a>
 						
 						
@@ -518,29 +535,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/contributing">
-							Contributing to the Galaxy Training Material
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/github-command-line-contribution/tutorial.html">
-						Contributing with GitHub via command-line
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/contributing">
-							Contributing to the Galaxy Training Material
-						</a>
-						/
-						<a href="/training-material//topics/contributing/tutorials/create-new-topic/tutorial.html">
-						Including a new topic
+						<a href="/training-material//topics/transcriptomics/tutorials/ref-based/tutorial.html">
+						Reference-based RNA-Seq data analysis
 						</a>
 						
 						
@@ -552,12 +552,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/contributing">
-							Contributing to the Galaxy Training Material
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/github-interface-contribution/tutorial.html">
-						Contributing with GitHub via its interface
+						<a href="/training-material//topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">
+						RNA Seq Counts to Viz in R
 						</a>
 						
 						
@@ -590,12 +590,12 @@ Sentry.init({
 							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/design/tutorial.html">
-						Design and plan session, course, materials
+						<a href="/training-material//topics/contributing/tutorials/generating-pdf/tutorial.html">
+						Generating PDF artefacts of the website
 						</a>
 						
 						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+	
 
 
 					</li>
@@ -641,8 +641,8 @@ Sentry.init({
 							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/running-jekyll/tutorial.html">
-						Running the GTN website locally
+						<a href="/training-material//topics/contributing/tutorials/github-command-line-contribution/tutorial.html">
+						Contributing with GitHub via command-line
 						</a>
 						
 						
@@ -658,8 +658,8 @@ Sentry.init({
 							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/learning-principles/tutorial.html">
-						Principles of learning and how they apply to training and teaching
+						<a href="/training-material//topics/contributing/tutorials/design/tutorial.html">
+						Design and plan session, course, materials
 						</a>
 						
 						
@@ -692,8 +692,8 @@ Sentry.init({
 							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/contributing/tutorials/generating-pdf/tutorial.html">
-						Generating PDF artefacts of the website
+						<a href="/training-material//topics/contributing/tutorials/github-interface-contribution/tutorial.html">
+						Contributing with GitHub via its interface
 						</a>
 						
 						
@@ -705,12 +705,29 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/genome-annotation">
-							Genome Annotation
+						<a href="/training-material/topics/contributing">
+							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/genome-annotation/tutorials/tnseq/tutorial.html">
-						Essential genes detection with Transposon insertion sequencing
+						<a href="/training-material//topics/contributing/tutorials/learning-principles/tutorial.html">
+						Principles of learning and how they apply to training and teaching
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/contributing">
+							Contributing to the Galaxy Training Material
+						</a>
+						/
+						<a href="/training-material//topics/contributing/tutorials/running-jekyll/tutorial.html">
+						Running the GTN website locally
 						</a>
 						
 						
@@ -722,12 +739,29 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/single-cell">
-							Single Cell
+						<a href="/training-material/topics/contributing">
+							Contributing to the Galaxy Training Material
 						</a>
 						/
-						<a href="/training-material//topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html">
-						Clustering 3K PBMCs with Scanpy
+						<a href="/training-material//topics/contributing/tutorials/create-new-topic/tutorial.html">
+						Including a new topic
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/sequence-analysis">
+							Sequence analysis
+						</a>
+						/
+						<a href="/training-material//topics/sequence-analysis/tutorials/mapping/tutorial.html">
+						Mapping
 						</a>
 						
 						
@@ -739,12 +773,318 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/single-cell">
-							Single Cell
+						<a href="/training-material/topics/sequence-analysis">
+							Sequence analysis
 						</a>
 						/
-						<a href="/training-material//topics/single-cell/tutorials/scrna-preprocessing/tutorial.html">
-						Pre-processing of Single-Cell RNA Data
+						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/tutorial.html">
+						Quality Control
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/variant-analysis">
+							Variant Analysis
+						</a>
+						/
+						<a href="/training-material//topics/variant-analysis/tutorials/exome-seq/tutorial.html">
+						Exome sequencing data analysis for diagnosing a genetic disease
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/variant-analysis">
+							Variant Analysis
+						</a>
+						/
+						<a href="/training-material//topics/variant-analysis/tutorials/sars-cov-2-variant-discovery/tutorial.html">
+						Mutation calling, viral genome reconstruction and lineage/clade assignment from SARS-CoV-2 sequencing data
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/hybrid-training/tutorial.html">
+						Hybrid training
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/assessment/tutorial.html">
+						Assessment and feedback in training and teachings
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/running-workshop/tutorial.html">
+						Running a workshop as instructor
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/learner_participation_engagement/tutorial.html">
+						Training techniques to enhance learner participation and engagement
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/motivation_demotivation/tutorial.html">
+						Motivation and Demotivation
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/teaching-online/tutorial.html">
+						Teaching online
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/workshop-final-exercise/tutorial.html">
+						Train-the-Trainer: putting it all together
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/live-coding/tutorial.html">
+						Live Coding is a Skill
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/experiences/tutorial.html">
+						Teaching experiences
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/organize-workshop/tutorial.html">
+						Organizing a workshop
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/teaching">
+							Teaching and Hosting Galaxy training
+						</a>
+						/
+						<a href="/training-material//topics/teaching/tutorials/setup-galaxy-for-training/tutorial.html">
+						Set up a Galaxy for Training
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/r-advanced/tutorial.html">
+						Advanced R in Galaxy
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/online-resources-protein/tutorial.html">
+						One protein along the UniProt page
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/online-resources-gene/tutorial.html">
+						Learning about one gene across biological resources and formats
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/data-science">
+							Foundations of Data Science
+						</a>
+						/
+						<a href="/training-material//topics/data-science/tutorials/r-basics/tutorial.html">
+						R basics in Galaxy
+						</a>
+						
+						
+	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/ecology">
+							Ecology
+						</a>
+						/
+						<a href="/training-material//topics/ecology/tutorials/regionalGAM/tutorial.html">
+						Regional GAM
 						</a>
 						
 						
@@ -773,29 +1113,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/ecology">
-							Ecology
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
 						</a>
 						/
-						<a href="/training-material//topics/ecology/tutorials/regionalGAM/tutorial.html">
-						Regional GAM
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/dev">
-							Development in Galaxy
-						</a>
-						/
-						<a href="/training-material//topics/dev/tutorials/data-source-integration/tutorial.html">
-						Data source integration
+						<a href="/training-material//topics/metagenomics/tutorials/general-tutorial/tutorial.html">
+						Analyses of metagenomics data - The global picture
 						</a>
 						
 						
@@ -811,8 +1134,42 @@ Sentry.init({
 							Metagenomics
 						</a>
 						/
-						<a href="/training-material//topics/metagenomics/tutorials/metatranscriptomics-short/tutorial.html">
-						Metatranscriptomics analysis using microbiome RNA-seq data (short)
+						<a href="/training-material//topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html">
+						Assembly of metagenomic sequencing data
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html">
+						16S Microbial Analysis with mothur (short)
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/metatranscriptomics/tutorial.html">
+						Metatranscriptomics analysis using microbiome RNA-seq data
 						</a>
 						
 						
@@ -879,80 +1236,46 @@ Sentry.init({
 							Metagenomics
 						</a>
 						/
-						<a href="/training-material//topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html">
-						16S Microbial Analysis with mothur (short)
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/metagenomics">
-							Metagenomics
-						</a>
-						/
-						<a href="/training-material//topics/metagenomics/tutorials/metatranscriptomics/tutorial.html">
-						Metatranscriptomics analysis using microbiome RNA-seq data
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/metagenomics">
-							Metagenomics
-						</a>
-						/
-						<a href="/training-material//topics/metagenomics/tutorials/metagenomics-assembly/tutorial.html">
-						Assembly of metagenomic sequencing data
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/metagenomics">
-							Metagenomics
-						</a>
-						/
-						<a href="/training-material//topics/metagenomics/tutorials/general-tutorial/tutorial.html">
-						Analyses of metagenomics data - The global picture
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/metagenomics">
-							Metagenomics
-						</a>
-						/
 						<a href="/training-material//topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">
 						Identification of the micro-organisms in a beer using Nanopore sequencing
 						</a>
 						
 						
 	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/metatranscriptomics-short/tutorial.html">
+						Metatranscriptomics analysis using microbiome RNA-seq data (short)
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/dev">
+							Development in Galaxy
+						</a>
+						/
+						<a href="/training-material//topics/dev/tutorials/data-source-integration/tutorial.html">
+						Data source integration
+						</a>
+						
+						
+	
 
 
 					</li>
@@ -981,23 +1304,6 @@ Sentry.init({
 							Introduction to Galaxy Analyses
 						</a>
 						/
-						<a href="/training-material//topics/introduction/tutorials/dummy/tutorial.html">
-						Upload data to Galaxy
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
 						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-short/tutorial.html">
 						A short introduction to Galaxy
 						</a>
@@ -1011,12 +1317,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/data-science">
-							Foundations of Data Science
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
 						</a>
 						/
-						<a href="/training-material//topics/data-science/tutorials/r-advanced/tutorial.html">
-						Advanced R in Galaxy
+						<a href="/training-material//topics/introduction/tutorials/dummy/tutorial.html">
+						Upload data to Galaxy
 						</a>
 						
 						
@@ -1028,80 +1334,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/data-science">
-							Foundations of Data Science
+						<a href="/training-material/topics/epigenetics">
+							Epigenetics
 						</a>
 						/
-						<a href="/training-material//topics/data-science/tutorials/online-resources-gene/tutorial.html">
-						Learning about one gene across biological resources and formats
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/data-science">
-							Foundations of Data Science
-						</a>
-						/
-						<a href="/training-material//topics/data-science/tutorials/online-resources-protein/tutorial.html">
-						One protein along the UniProt page
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/data-science">
-							Foundations of Data Science
-						</a>
-						/
-						<a href="/training-material//topics/data-science/tutorials/r-basics/tutorial.html">
-						R basics in Galaxy
-						</a>
-						
-						
-	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/assessment/tutorial.html">
-						Assessment and feedback in training and teachings
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/live-coding/tutorial.html">
-						Live Coding is a Skill
+						<a href="/training-material//topics/epigenetics/tutorials/estrogen-receptor-binding-site-identification/tutorial.html">
+						Identification of the binding sites of the Estrogen receptor
 						</a>
 						
 						
@@ -1113,46 +1351,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
+						<a href="/training-material/topics/epigenetics">
+							Epigenetics
 						</a>
 						/
-						<a href="/training-material//topics/teaching/tutorials/workshop-final-exercise/tutorial.html">
-						Train-the-Trainer: putting it all together
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/learner_participation_engagement/tutorial.html">
-						Training techniques to enhance learner participation and engagement
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/organize-workshop/tutorial.html">
-						Organizing a workshop
+						<a href="/training-material//topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.html">
+						Formation of the Super-Structures on the Inactive X
 						</a>
 						
 						
@@ -1164,46 +1368,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
+						<a href="/training-material/topics/single-cell">
+							Single Cell
 						</a>
 						/
-						<a href="/training-material//topics/teaching/tutorials/hybrid-training/tutorial.html">
-						Hybrid training
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/teaching-online/tutorial.html">
-						Teaching online
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/experiences/tutorial.html">
-						Teaching experiences
+						<a href="/training-material//topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html">
+						Clustering 3K PBMCs with Scanpy
 						</a>
 						
 						
@@ -1215,182 +1385,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
+						<a href="/training-material/topics/single-cell">
+							Single Cell
 						</a>
 						/
-						<a href="/training-material//topics/teaching/tutorials/setup-galaxy-for-training/tutorial.html">
-						Set up a Galaxy for Training
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/motivation_demotivation/tutorial.html">
-						Motivation and Demotivation
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/teaching">
-							Teaching and Hosting Galaxy training
-						</a>
-						/
-						<a href="/training-material//topics/teaching/tutorials/running-workshop/tutorial.html">
-						Running a workshop as instructor
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/variant-analysis">
-							Variant Analysis
-						</a>
-						/
-						<a href="/training-material//topics/variant-analysis/tutorials/sars-cov-2-variant-discovery/tutorial.html">
-						Mutation calling, viral genome reconstruction and lineage/clade assignment from SARS-CoV-2 sequencing data
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/variant-analysis">
-							Variant Analysis
-						</a>
-						/
-						<a href="/training-material//topics/variant-analysis/tutorials/exome-seq/tutorial.html">
-						Exome sequencing data analysis for diagnosing a genetic disease
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
-						</a>
-						/
-						<a href="/training-material//topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">
-						RNA Seq Counts to Viz in R
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
-						</a>
-						/
-						<a href="/training-material//topics/transcriptomics/tutorials/ref-based/tutorial.html">
-						Reference-based RNA-Seq data analysis
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
-						</a>
-						/
-						<a href="/training-material//topics/transcriptomics/tutorials/clipseq/tutorial.html">
-						CLIP-Seq data analysis from pre-processing to motif detection
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
-						</a>
-						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/history/tutorial.html">
-						Understanding Galaxy history system
-						</a>
-						
-						
-	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
-						</a>
-						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/rstudio/tutorial.html">
-						RStudio in Galaxy
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/statistics">
-							Statistics and machine learning
-						</a>
-						/
-						<a href="/training-material//topics/statistics/tutorials/classification_regression/tutorial.html">
-						Machine learning: classification and regression
+						<a href="/training-material//topics/single-cell/tutorials/scrna-preprocessing/tutorial.html">
+						Pre-processing of Single-Cell RNA Data
 						</a>
 						
 						
@@ -1426,12 +1426,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/epigenetics">
-							Epigenetics
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
 						</a>
 						/
-						<a href="/training-material//topics/epigenetics/tutorials/formation_of_super-structures_on_xi/slides.html">
-						ChIP-seq data analysis
+						<a href="/training-material//topics/admin/tutorials/galaxy-docker/slides.html">
+						Docker and Galaxy
 						</a>
 						
 						
@@ -1443,29 +1443,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/epigenetics">
-							Epigenetics
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
 						</a>
 						/
-						<a href="/training-material//topics/epigenetics/tutorials/introduction-chip-seq/slides.html">
-						Introduction to ChIP-Seq data analysis
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/sequence-analysis">
-							Sequence analysis
-						</a>
-						/
-						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/slides.html">
-						Quality Control
+						<a href="/training-material//topics/transcriptomics/tutorials/introduction/slides.html">
+						Introduction to Transcriptomics
 						</a>
 						
 						
@@ -1528,12 +1511,46 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/dev">
-							Development in Galaxy
+						<a href="/training-material/topics/sequence-analysis">
+							Sequence analysis
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/toolshed/slides.html">
-						Tool Shed: sharing Galaxy tools
+						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/slides.html">
+						Quality Control
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/variant-analysis">
+							Variant Analysis
+						</a>
+						/
+						<a href="/training-material//topics/variant-analysis/tutorials/introduction/slides.html">
+						Introduction to Variant analysis
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/metagenomics">
+							Metagenomics
+						</a>
+						/
+						<a href="/training-material//topics/metagenomics/tutorials/introduction/slides.html">
+						Introduction to metagenomics
 						</a>
 						
 						
@@ -1579,12 +1596,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/metagenomics">
-							Metagenomics
+						<a href="/training-material/topics/dev">
+							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/metagenomics/tutorials/introduction/slides.html">
-						Introduction to metagenomics
+						<a href="/training-material//topics/dev/tutorials/toolshed/slides.html">
+						Tool Shed: sharing Galaxy tools
 						</a>
 						
 						
@@ -1613,12 +1630,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/variant-analysis">
-							Variant Analysis
+						<a href="/training-material/topics/epigenetics">
+							Epigenetics
 						</a>
 						/
-						<a href="/training-material//topics/variant-analysis/tutorials/introduction/slides.html">
-						Introduction to Variant analysis
+						<a href="/training-material//topics/epigenetics/tutorials/introduction-chip-seq/slides.html">
+						Introduction to ChIP-Seq data analysis
 						</a>
 						
 						
@@ -1630,29 +1647,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
+						<a href="/training-material/topics/epigenetics">
+							Epigenetics
 						</a>
 						/
-						<a href="/training-material//topics/transcriptomics/tutorials/introduction/slides.html">
-						Introduction to Transcriptomics
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/galaxy-docker/slides.html">
-						Docker and Galaxy
+						<a href="/training-material//topics/epigenetics/tutorials/formation_of_super-structures_on_xi/slides.html">
+						ChIP-seq data analysis
 						</a>
 						
 						
@@ -1724,7 +1724,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc081; --color-darker: #f8a300; --color-dimmed: #ffb04e;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffd8ba; --color-darker: #ffb96c; --color-dimmed: #ffc998;">new tutorial</span>
 
     <hr/>
     <p class="card-text">
@@ -1793,7 +1793,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #f7c600; --color-darker: #dcb000; --color-dimmed: #e9bb00;">paper</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffdc8d; --color-darker: #f1c100; --color-dimmed: #ffcd16;">paper</span>
 
     <hr/>
     <p class="card-text">
@@ -1862,9 +1862,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00e98f; --color-darker: #00d07e; --color-dimmed: #00dc86;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #18ff9e; --color-darker: #00e38b; --color-dimmed: #00f194;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #c9c7ff; --color-darker: #b0adff; --color-dimmed: #bcbaff;">new topic</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #deddff; --color-darker: #c3c1ff; --color-dimmed: #d0cfff;">new topic</span>
 
     <hr/>
     <p class="card-text">
@@ -1933,7 +1933,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #f1b8ff; --color-darker: #ec94ff; --color-dimmed: #efa7ff;">feedback</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #f6d4ff; --color-darker: #f0b0ff; --color-dimmed: #f3c3ff;">feedback</span>
 
     <hr/>
     <p class="card-text">
@@ -2002,9 +2002,9 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #c6c7ff; --color-darker: #acaeff; --color-dimmed: #b9bbff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #dcddff; --color-darker: #c0c2ff; --color-dimmed: #cecfff;">new feature</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e2ea; --color-darker: #00c9d0; --color-dimmed: #00d5dd;">contributors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #30f7ff; --color-darker: #00dce4; --color-dimmed: #00eaf2;">contributors</span>
 
     <hr/>
     <p class="card-text">
@@ -2073,11 +2073,11 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc081; --color-darker: #f8a300; --color-dimmed: #ffb04e;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffd8ba; --color-darker: #ffb96c; --color-dimmed: #ffc998;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e7b5; --color-darker: #00cda0; --color-dimmed: #00daab;">variant-analysis</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00fdc6; --color-darker: #00e1b0; --color-dimmed: #00efbb;">variant-analysis</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #eabbff; --color-darker: #e29aff; --color-dimmed: #e6abff;">covid-19</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #f2d6ff; --color-darker: #e8b4ff; --color-dimmed: #edc5ff;">covid-19</span>
 
     <hr/>
     <p class="card-text">
@@ -2146,13 +2146,13 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #00e98f; --color-darker: #00d07e; --color-dimmed: #00dc86;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #18ff9e; --color-darker: #00e38b; --color-dimmed: #00f194;">gtn infrastructure</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e2ea; --color-darker: #00c9d0; --color-dimmed: #00d5dd;">contributors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #30f7ff; --color-darker: #00dce4; --color-dimmed: #00eaf2;">contributors</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #00e6c0; --color-darker: #00cdab; --color-dimmed: #00d9b6;">instructors</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #00fcd3; --color-darker: #00e0bb; --color-dimmed: #00eec7;">instructors</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #c6c7ff; --color-darker: #acaeff; --color-dimmed: #b9bbff;">new feature</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #dcddff; --color-darker: #c0c2ff; --color-dimmed: #cecfff;">new feature</span>
 
     <hr/>
     <p class="card-text">
@@ -2221,7 +2221,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffb4f0; --color-darker: #ff8eea; --color-dimmed: #ffa1ed;">cofest</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffd2f5; --color-darker: #ffacee; --color-dimmed: #ffc0f2;">cofest</span>
 
     <hr/>
     <p class="card-text">
@@ -2255,67 +2255,7 @@ var topics = [
 
 	
 	
-	"Epigenetics",
-
-	
-	
-	"Epigenetics",
-
-	
-	
-	"Assembly",
-
-	
-	
-	"Sequence analysis",
-
-	
-	
-	"Sequence analysis",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
+	"Statistics and machine learning",
 
 	
 	
@@ -2323,151 +2263,7 @@ var topics = [
 
 	
 	
-	"Single Cell",
-
-	
-	
-	"Single Cell",
-
-	
-	
-	"Ecology",
-
-	
-	
-	"Ecology",
-
-	
-	
-	"Development in Galaxy",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Introduction to Galaxy Analyses",
-
-	
-	
-	"Introduction to Galaxy Analyses",
-
-	
-	
-	"Introduction to Galaxy Analyses",
-
-	
-	
-	"Foundations of Data Science",
-
-	
-	
-	"Foundations of Data Science",
-
-	
-	
-	"Foundations of Data Science",
-
-	
-	
-	"Foundations of Data Science",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Teaching and Hosting Galaxy training",
-
-	
-	
-	"Variant Analysis",
-
-	
-	
-	"Variant Analysis",
-
-	
-	
-	"Transcriptomics",
-
-	
-	
-	"Transcriptomics",
-
-	
-	
-	"Transcriptomics",
+	"Assembly",
 
 	
 	
@@ -2479,20 +2275,59 @@ var topics = [
 
 	
 	
-	"Statistics and machine learning",
-
-
-	
-	
-	"Development in Galaxy",
+	"Transcriptomics",
 
 	
 	
-	"Epigenetics",
+	"Transcriptomics",
 
 	
 	
-	"Epigenetics",
+	"Transcriptomics",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
 
 	
 	
@@ -2500,35 +2335,7 @@ var topics = [
 
 	
 	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Contributing to the Galaxy Training Material",
-
-	
-	
-	"Development in Galaxy",
-
-	
-	
-	"Development in Galaxy",
-
-	
-	
-	"Development in Galaxy",
-
-	
-	
-	"Metagenomics",
-
-	
-	
-	"Introduction to Galaxy Analyses",
+	"Sequence analysis",
 
 	
 	
@@ -2536,11 +2343,204 @@ var topics = [
 
 	
 	
-	"Transcriptomics",
+	"Variant Analysis",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Teaching and Hosting Galaxy training",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Foundations of Data Science",
+
+	
+	
+	"Ecology",
+
+	
+	
+	"Ecology",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Development in Galaxy",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Epigenetics",
+
+	
+	
+	"Epigenetics",
+
+	
+	
+	"Single Cell",
+
+	
+	
+	"Single Cell",
+
+
+	
+	
+	"Development in Galaxy",
 
 	
 	
 	"Galaxy Server administration",
+
+	
+	
+	"Transcriptomics",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Contributing to the Galaxy Training Material",
+
+	
+	
+	"Sequence analysis",
+
+	
+	
+	"Variant Analysis",
+
+	
+	
+	"Metagenomics",
+
+	
+	
+	"Development in Galaxy",
+
+	
+	
+	"Development in Galaxy",
+
+	
+	
+	"Development in Galaxy",
+
+	
+	
+	"Introduction to Galaxy Analyses",
+
+	
+	
+	"Epigenetics",
+
+	
+	
+	"Epigenetics",
 
 ];
 
@@ -2813,7 +2813,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/8968634ab94d0a0b5c6820fea074291ce56c18bc">8968634</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/adb133395e900833d54d8fff9de27c56a23d4317">adb1333</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -2841,7 +2841,7 @@ var chart2 = new Chart(ctx2, {
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1695861346'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1695897650'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
