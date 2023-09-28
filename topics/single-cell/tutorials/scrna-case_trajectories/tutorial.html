@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@adb133395e900833d54d8fff9de27c56a23d4317",
+  release: "galaxy-training-network@a17a9b26dd6370f62876f07a87cbf092881912a7",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695897650' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695897650' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695899613' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695899613' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-09-26 19:29:31 +0000">
+<meta name="DC.date" content="2023-09-28 11:11:24 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-09-26 19:29:31 +0000",
+  "dateModified": "2023-09-28 11:11:24 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1695897650'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1695899613'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -852,7 +852,7 @@ Sentry.init({
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Sep 26, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Sep 28, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -1083,6 +1083,7 @@ Sentry.init({
       <li>Well now this is exciting! Our DP-late is more clearly separating, and we might also suppose that DP-M1, DP-M2, and DP-M3 are actually earlier on in the differentiation towards mature T-cells. And we’re only just getting started!</li>
     </ol>
 
+    <figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG1.png" alt="Plot showing the T Mat and DP L clusters have separated from the rest of the cells. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> FDG Plot of our T-cell dataset</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1173,6 +1174,7 @@ Sentry.init({
 However, we tried that, and it called far too many clusters given the depth of sequencing in this dataset. Let’s stick with our known cell types and move from there.</li>
     </ol>
 
+    <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG2.png" alt="The T mature and DP L clusters have been stretched out. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> FDG Plot after recalculating neighbours from the diffusion map</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1245,6 +1247,7 @@ However, we tried that, and it called far too many clusters given the depth of s
 
   <ol>
     <li>How have the relationships between our cell clusters changed now?</li>
+    <li></li>
   </ol>
 
   <blockquote class="solution">
@@ -1252,8 +1255,10 @@ However, we tried that, and it called far too many clusters given the depth of s
 
     <ol>
       <li>The way the clusters are arranged has changed a bit now. The M4 cluster is right in the middle of the M1-3 clusters, rather than heading off on its own. The M1 cluster is looking like it is driving towards differentiation, which is not somthing we had necessarily been able to specify before by just looking at our cluster graphs or applying our biological knowledge.</li>
+      <li>The expression of both Cd4 and Cd8 appears higher than we might expect in the M4 cluster - perhaps this is a sign that it is closer to the mature T cells than it seems in this simple plot.</li>
     </ol>
 
+    <figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesPAGA.png" alt="DN cluster is on one side of the plot, with the DP L and T mature clusters on the other side. The other clusters are close together in the centre of the plot. Coloured to show higher Cd4 and Cd8 expression in the M4, DP L and T mature clusters." width="1732" height="558" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> PAGA plots coloured by cell type, Cd4 expression, and Cd8 expression</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1300,6 +1305,7 @@ However, we tried that, and it called far too many clusters given the depth of s
       <li>The interesting change here is that our DP-M4 cells are now heading on a clear trajectory towards differentiation. It looks like we’ve got the correct ordering of cells from DN through the DP groups and on towards T-mature. We didn’t see this in our previous plots.</li>
     </ol>
 
+    <figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG3.png" alt="The M4 cluster is now closer to the DP L cluster. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> FDG plot initiated from the PAGA plot</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1339,6 +1345,7 @@ However, we tried that, and it called far too many clusters given the depth of s
       <li>We’re seeing a clear trajectory issue whereby the knockout cells are not found along the trajectory into T-mature (which, well, we kind of already figured out with just the cluster analysis, but we can feel even more confident about our results!)</li>
     </ol>
 
+    <figure id="figure-5" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDGGenotype.png" alt="Most clusters are coloured as a mix of both genotypes but the DP L and T mature clusters are mainly coloured as wildtype cells. " width="709" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> FDG plot coloured by genotype</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1387,6 +1394,7 @@ However, we tried that, and it called far too many clusters given the depth of s
       <li>It’s clear that both Cd4 and Cd8 are being expressed mainly in the later stages of T-cell development, as they head towards the DP-L cluster - although Cd4 expression is a bit more widespread. This is what we would expect to see in genes that are associated with mature T-cells. You might also be able to spot some differences in the expression of the two genes in our mature T-cell group, but there doesn’t seem to be a very clear division between the cells that express Cd4 and those that express Cd8. This is a bit disappointing, as we know that there are two types of mature T-cells, which each express a different gene.</li>
     </ol>
 
+    <figure id="figure-6" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDGExpression.png" alt="Cells in the DP L cluster are coloured as having the highest expression levels of both Cd4 and Cd8 while most cells in the M4 cluster already show higher expression of Cd8. " width="1220" height="520" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> FDG plot showing expression of Cd4 and Cd8</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1439,6 +1447,7 @@ However, we tried that, and it called far too many clusters given the depth of s
       <li>When we look at the cell type and DPT plots, we can see that there’s a clear progresion from our root DN cells, through the various groups of DP cells, into DP-L and then T-mat. This matches with our expectations that the DP-L and DP-mat clusters represent later stages in T-cell development. The DPT plot also confirms that the DP-M4 cluster is heading towards differentiation, which makes sense given its position on our FDG plot.</li>
     </ol>
 
+    <figure id="figure-7" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDGPseudotime.png" alt="Cells in DN cluster are coloured as earliest in pseudotime, which increases through clusters M1 to M4, into cluster DP L and is latest in T mature. " width="1203" height="532" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> FDG plots showing cell types and pseudotime</figcaption></figure>
   </blockquote>
 
 </blockquote>
@@ -1664,7 +1673,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/adb133395e900833d54d8fff9de27c56a23d4317">adb1333</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a17a9b26dd6370f62876f07a87cbf092881912a7">a17a9b2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1692,7 +1701,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1695897650'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1695899613'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
