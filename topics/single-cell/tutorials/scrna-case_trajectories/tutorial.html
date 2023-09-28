@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@a17a9b26dd6370f62876f07a87cbf092881912a7",
+  release: "galaxy-training-network@a588e2f52c4085da21f3e6596c48ac203e4991ee",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695899613' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695899613' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1695926280' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1695926280' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-09-28 11:11:24 +0000">
+<meta name="DC.date" content="2023-09-28 18:36:31 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-09-28 11:11:24 +0000",
+  "dateModified": "2023-09-28 18:36:31 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1695899613'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1695926280'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -1063,6 +1063,7 @@ Sentry.init({
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
@@ -1151,6 +1152,7 @@ Sentry.init({
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
@@ -1189,7 +1191,7 @@ However, we tried that, and it called far too many clusters given the depth of s
   </li>
   <li>Everyone else:
     <ul>
-      <li>you could recluster your cells using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0" title="Scanpy FindCluster tool" aria-role="link"><strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0</span></span> at a different resolution, perhaps 0.6 or lower (Take a look at the Cell clusters step in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html tutorial if you need help with this">Filter, Plot and Explore</a>
+      <li>you could recluster your cells using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0" title="Scanpy FindCluster tool" aria-role="link"><strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0</span></span> at a different resolution, perhaps lower than the 0.6 we used before (Take a look at the Cell clusters step in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html tutorial if you need help with this">Filter, Plot and Explore</a>
         <ul>
           <li>Please note that in this case, you will want to change the PAGA step <code class="language-plaintext highlighter-rouge">sc.pl.paga</code> to group by <code class="language-plaintext highlighter-rouge">louvain</code> rather than <code class="language-plaintext highlighter-rouge">cell_type</code>. You can certainly still plot both, we only didn’t because with using our old Louvain calls, the cell_type and louvain categories are identical.</li>
         </ul>
@@ -1247,7 +1249,7 @@ However, we tried that, and it called far too many clusters given the depth of s
 
   <ol>
     <li>How have the relationships between our cell clusters changed now?</li>
-    <li></li>
+    <li>Which clusters are expressing our genes of interest, Cd4 and Cd8, at the highest levels?</li>
   </ol>
 
   <blockquote class="solution">
@@ -1255,7 +1257,7 @@ However, we tried that, and it called far too many clusters given the depth of s
 
     <ol>
       <li>The way the clusters are arranged has changed a bit now. The M4 cluster is right in the middle of the M1-3 clusters, rather than heading off on its own. The M1 cluster is looking like it is driving towards differentiation, which is not somthing we had necessarily been able to specify before by just looking at our cluster graphs or applying our biological knowledge.</li>
-      <li>The expression of both Cd4 and Cd8 appears higher than we might expect in the M4 cluster - perhaps this is a sign that it is closer to the mature T cells than it seems in this simple plot.</li>
+      <li>Cd4 and Cd8 expression appears highest in the DP-L cluster. The expression of both Cd4 and Cd8 also appears higher than we might expect in the DP-M4 cluster - perhaps this is a sign that it is closer to the DP-L cluster than it seems in this simple plot.</li>
     </ol>
 
     <figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesPAGA.png" alt="DN cluster is on one side of the plot, with the DP L and T mature clusters on the other side. The other clusters are close together in the centre of the plot. Coloured to show higher Cd4 and Cd8 expression in the M4, DP L and T mature clusters." width="1732" height="558" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> PAGA plots coloured by cell type, Cd4 expression, and Cd8 expression</figcaption></figure>
@@ -1284,6 +1286,7 @@ However, we tried that, and it called far too many clusters given the depth of s
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
@@ -1314,7 +1317,7 @@ However, we tried that, and it called far too many clusters given the depth of s
 
 <p>The experiment that produced this data used two different groups of mice - the control or wildtype group and the knockout mice that were missing a gene involved in the maturation of the thymus gland. Since we know the genotype of the mice from which each sample was collected, we can colour in our plots to see if there are any differences in the cells present in wildtype and knockout mice.</p>
 
-<p>The easiest way to do this is just to rerun the previous step, but changing the attribute we want to use to colour the FDG plot.</p>
+<p>The easiest way to do this is just to rerun <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> the previous step, but changing the attribute we want to use to colour the FDG plot.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-plot-by-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot by genotype</div>
@@ -1325,6 +1328,8 @@ However, we tried that, and it called far too many clusters given the depth of s
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">genotype</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
   </ol>
@@ -1363,6 +1368,7 @@ However, we tried that, and it called far too many clusters given the depth of s
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">ENSMUSG00000023274,ENSMUSG00000053977</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
@@ -1426,6 +1432,7 @@ However, we tried that, and it called far too many clusters given the depth of s
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy DPT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type,dpt_pseudotime</code></li>
+        <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
       </ul>
     </li>
@@ -1452,16 +1459,16 @@ However, we tried that, and it called far too many clusters given the depth of s
 
 </blockquote>
 
-<p>This is nice, as it supports our conclusions thus far on the trajectory of the T-cell differentiation. With single-cell, the more ways you can prove to yourself what you’re seeing is real, the better! If we did not find consistent results, we would need to delve in further to see if the algorithm (not all algorithms fit all data!) or the biology.</p>
+<p>This is nice, as it supports our conclusions thus far on the trajectory of the T-cell differentiation. With single-cell, the more ways you can prove to yourself what you’re seeing is real, the better! If we did not find consistent results, we would need to delve in further to see if the cause is the algorithm (not all algorithms fit all data!) or the biology.</p>
 
-<p>Where might we go from here? We might consider playing with our louvain resolutions, to get the two branches to be called as different clusters, and then comparing them to each other for gene differences or genotype differences. We might also use different objects (for instance, what if we regressed out cell cycle genes?) and see if that changes the results. Perhaps we would eliminate the DN double-branch input. Or perhaps that’s real, and we should investigate that. What would you do?</p>
+<p>Where might we go from here? We might consider playing with our louvain resolutions, to see if we can get the two groups of Cd4+ and Cd8+ cells to be called as different clusters, and then comparing them to each other for gene differences or genotype differences. We might also use different objects (for instance, what if we regressed out cell cycle genes?) and see if that changes the results. What would you do?</p>
 
 <h2 id="working-in-a-group-the-finale">Working in a group? The finale!</h2>
-<p>Look at each others images! How do yours differ, what decisions were made? Previously, when calling clusters in the ‘Filter, Plot and Explore Single-cell RNA-seq Data’, the interpretation at the end is largely consistent, no matter what decisions are made throughout (mostly!). Is this the case with your trajectory analyses? You may find that it is not, which is why pseudotime analysis even more crucially depends on your understanding of the underlying biology (we have to choose the root cells, for instance, or recognise that DN cells should not be found in the middle of the DPs) as well as choosing the right analysis. That’s why it is a huge field! With analysing scRNA-seq data, it’s almost like you need to know about 75% of your data and make sure your analysis shows that, for you to then identify the 25% new information.</p>
+<p>Look at each others images! How do yours differ, what decisions were made? Previously, when calling clusters in the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">Filter, Plot and Explore Single-cell RNA-seq Data</a> tutorial, the interpretation at the end is largely consistent, no matter what decisions are made throughout (mostly!). Is this the case with your trajectory analyses? You may find that it is not, which is why pseudotime analysis even more crucially depends on your understanding of the underlying biology (we have to choose the root cells, for instance, or recognise that DN cells should not be found in the middle of the DPs) as well as choosing the right analysis. That’s why it is a huge field! With analysing scRNA-seq data, it’s almost like you need to know about 75% of your data and make sure your analysis shows that, for you to then identify the 25% new information.</p>
 
 <h1 id="conclusion">Conclusion</h1>
 
-<p>Congratulations! You’ve made it to the end! You might be interested in this <a href="https://humancellatlas.usegalaxy.eu/u/marisa_jl/h/inferring-trajectories-using-scanpy---example-history">Example History</a> which shows the results you shold expect to see if you follow this tutorial.</p>
+<p>Congratulations! You’ve made it to the end! You might be interested in the <a href="https://humancellatlas.usegalaxy.eu/u/marisa_jl/w/workflow-constructed-from-history-inferring-trajectories-with-scanpy-tutorial-1">workflow</a> for this tutorial or this <a href="https://humancellatlas.usegalaxy.eu/u/marisa_jl/h/inferring-trajectories-using-scanpy---example-history">Example History</a> which shows the results you should expect to see if you follow this tutorial.</p>
 
 <p>In this tutorial, you moved from called clusters to inferred relationships and trajectories using pseudotime analysis. You found an alternative to PCA (diffusion map), an alternative to tSNE (force-directed graph), a means of identifying cluster relationships (PAGA), and a metric for pseudotime (diffusion pseudotime) to identify early and late cells. If you were working in a group, you found that such analysis is slightly more sensitive to your decisions than the simpler filtering/plotting/clustering is. We are inferring and assuming relationships and time, so that makes sense!</p>
 
@@ -1673,7 +1680,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/a17a9b26dd6370f62876f07a87cbf092881912a7">a17a9b2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a588e2f52c4085da21f3e6596c48ac203e4991ee">a588e2f</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1701,7 +1708,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1695899613'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1695926280'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
