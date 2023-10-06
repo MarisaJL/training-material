@@ -5253,7 +5253,7 @@
       "workflows": [
         {
           "workflow": "inferring-trajectories-with-scanpy-workflow.ga",
-          "tests": false,
+          "tests": true,
           "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_trajectories/workflows/inferring-trajectories-with-scanpy-workflow.ga",
           "path": "topics/single-cell/tutorials/scrna-case_trajectories/workflows/inferring-trajectories-with-scanpy-workflow.ga",
           "wfid": "single-cell-scrna-case_trajectories",
