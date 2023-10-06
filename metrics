@@ -39,8 +39,8 @@ gtn_project_years_total 8.276712328767124
 # TYPE tutorial_update_age_days histogram
 tutorial_update_age_days{le="1"} 1
 tutorial_update_age_days{le="7"} 0
-tutorial_update_age_days{le="28"} 18
-tutorial_update_age_days{le="90"} 16
+tutorial_update_age_days{le="28"} 14
+tutorial_update_age_days{le="90"} 20
 tutorial_update_age_days{le="365"} 318
 tutorial_update_age_days{le="730"} 12
 tutorial_update_age_days{le="1095"} 0
