@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@6d1fbaad6ab4284931c6e48bc1e8811614788e5b",
+  release: "galaxy-training-network@a91fe4095c3bbf9ccefc7d47a45e1767854a8b42",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1696579233' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1696579233' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1696580402' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1696580402' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -68,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1696579233'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1696580402'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -2832,18 +2832,6 @@ var resources = {
     ],
     "url": "/training-material/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html"
   },
-  "/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.html": {
-    "type": "Tutorial",
-    "topic": "Single Cell",
-    "title": "Inferring Trajectories using Scanpy",
-    "contributors": "",
-    "tags": [
-      "<a class=\"label label-default\" title=\"Show all tutorials tagged single-cell\" href=\"/training-material/search?query=single-cell\" style=\"--color-primary: #00e4d2; --color-darker: #00cbbb; --color-dimmed: #00d8c7;\">single-cell</a>",
-      "<a class=\"label label-default\" title=\"Show all tutorials tagged 10x\" href=\"/training-material/search?query=10x\" style=\"--color-primary: #ffbac4; --color-darker: #ff97a8; --color-dimmed: #ffa9b6;\">10x</a>",
-      "<a class=\"label label-default\" title=\"Show all tutorials tagged transcriptomics\" href=\"/training-material/search?query=transcriptomics\" style=\"--color-primary: #e0cf00; --color-darker: #c8b800; --color-dimmed: #d4c300;\">transcriptomics</a>"
-    ],
-    "url": "/training-material/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.html"
-  },
   "/topics/single-cell/tutorials/scrna-scater-qc/tutorial.html": {
     "type": "Tutorial",
     "topic": "Single Cell",
@@ -3034,6 +3022,18 @@ var resources = {
       "<a class=\"label label-default\" title=\"Show all tutorials tagged jupyter-notebook\" href=\"/training-material/search?query=jupyter-notebook\" style=\"--color-primary: #00e1f3; --color-darker: #00c8d8; --color-dimmed: #00d5e6;\">jupyter-notebook</a>"
     ],
     "url": "/training-material/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html"
+  },
+  "/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.html": {
+    "type": "Tutorial",
+    "topic": "Single Cell",
+    "title": "Inferring Trajectories using Scanpy",
+    "contributors": "",
+    "tags": [
+      "<a class=\"label label-default\" title=\"Show all tutorials tagged single-cell\" href=\"/training-material/search?query=single-cell\" style=\"--color-primary: #00e4d2; --color-darker: #00cbbb; --color-dimmed: #00d8c7;\">single-cell</a>",
+      "<a class=\"label label-default\" title=\"Show all tutorials tagged 10x\" href=\"/training-material/search?query=10x\" style=\"--color-primary: #ffbac4; --color-darker: #ff97a8; --color-dimmed: #ffa9b6;\">10x</a>",
+      "<a class=\"label label-default\" title=\"Show all tutorials tagged transcriptomics\" href=\"/training-material/search?query=transcriptomics\" style=\"--color-primary: #e0cf00; --color-darker: #c8b800; --color-dimmed: #d4c300;\">transcriptomics</a>"
+    ],
+    "url": "/training-material/topics/single-cell/tutorials/scrna-case_trajectories/tutorial.html"
   },
   "/topics/single-cell/tutorials/bulk-music-4-compare/tutorial.html": {
     "type": "Tutorial",
@@ -7718,7 +7718,7 @@ fetch('/training-material/search.json')
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/6d1fbaad6ab4284931c6e48bc1e8811614788e5b">6d1fbaa</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a91fe4095c3bbf9ccefc7d47a45e1767854a8b42">a91fe40</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -7746,7 +7746,7 @@ fetch('/training-material/search.json')
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1696579233'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1696580402'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
