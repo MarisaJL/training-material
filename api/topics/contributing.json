@@ -2200,6 +2200,11 @@
         ],
         "inexact": [
           {
+            "url": "https://galaxy.mesocentre.uca.fr",
+            "name": "Galaxy@AuBi",
+            "usegalaxy": "false"
+          },
+          {
             "url": "https://galaxytrakr.org/",
             "name": "GalaxyTrakr",
             "usegalaxy": "false"
@@ -2208,10 +2213,6 @@
             "url": "https://galaxy.hyphy.org/",
             "name": "HyPhy HIV NGS Tools",
             "usegalaxy": "false"
-          },
-          {
-            "url": "https://galaxy.bio.di.uminho.pt/",
-            "name": "PhagePromotor"
           }
         ]
       },
