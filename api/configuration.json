@@ -133,7 +133,7 @@
       "resources": [
         "assets/js/theme.js"
       ],
-      "timestamp": 1698937411
+      "timestamp": 1698940589
     },
     "main": {
       "preload": true,
@@ -146,7 +146,7 @@
         "assets/js/list.min.js",
         "assets/js/main.js"
       ],
-      "timestamp": 1698937411
+      "timestamp": 1698940589
     }
   },
   "figurify": {
@@ -289,8 +289,8 @@
   "serving": false,
   "boxify": {
   },
-  "git_revision": "8024a69bcd55a976af26024f704e6060c6e29b5b",
-  "git_revision_short": "8024a69",
+  "git_revision": "9d233929c7bc7d46be95660993d786de6122829f",
+  "git_revision_short": "9d23392",
   "gtn_fork": "MarisaJL",
   "git_tags": [
 
