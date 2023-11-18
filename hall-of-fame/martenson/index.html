@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1700181548' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1700181548' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1700267840' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1700267840' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -68,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1700181548'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1700267840'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -361,16 +361,16 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
+						<a href="/training-material/topics/dev">
+							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/history/tutorial.html">
-						Understanding Galaxy history system
+						<a href="/training-material//topics/dev/tutorials/webhooks/tutorial.html">
+						Galaxy Webhooks
 						</a>
 						
 						
-	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
+	
 
 
 					</li>
@@ -412,16 +412,16 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/dev">
-							Development in Galaxy
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/webhooks/tutorial.html">
-						Galaxy Webhooks
+						<a href="/training-material//topics/galaxy-interface/tutorials/history/tutorial.html">
+						Understanding Galaxy history system
 						</a>
 						
 						
-	
+	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
 
 
 					</li>
@@ -436,29 +436,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
+						<a href="/training-material/topics/dev">
+							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/admin/tutorials/tool-management/slides.html">
-						Galaxy Tool Management with Ephemeris
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
-						</a>
-						/
-						<a href="/training-material//topics/admin/tutorials/troubleshooting/slides.html">
-						Galaxy Troubleshooting
+						<a href="/training-material//topics/dev/tutorials/webhooks/slides.html">
+						Galaxy Webhooks
 						</a>
 						
 						
@@ -491,8 +474,8 @@ Sentry.init({
 							Galaxy Server administration
 						</a>
 						/
-						<a href="/training-material//topics/admin/tutorials/advanced-galaxy-customisation/slides.html">
-						Advanced customisation of a Galaxy instance
+						<a href="/training-material//topics/admin/tutorials/tool-management/slides.html">
+						Galaxy Tool Management with Ephemeris
 						</a>
 						
 						
@@ -525,8 +508,8 @@ Sentry.init({
 							Galaxy Server administration
 						</a>
 						/
-						<a href="/training-material//topics/admin/tutorials/object-store/slides.html">
-						Storage Management
+						<a href="/training-material//topics/admin/tutorials/troubleshooting/slides.html">
+						Galaxy Troubleshooting
 						</a>
 						
 						
@@ -559,6 +542,23 @@ Sentry.init({
 							Galaxy Server administration
 						</a>
 						/
+						<a href="/training-material//topics/admin/tutorials/advanced-galaxy-customisation/slides.html">
+						Advanced customisation of a Galaxy instance
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
 						<a href="/training-material//topics/admin/tutorials/production/slides.html">
 						Gearing towards production
 						</a>
@@ -572,12 +572,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/dev">
-							Development in Galaxy
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/webhooks/slides.html">
-						Galaxy Webhooks
+						<a href="/training-material//topics/admin/tutorials/object-store/slides.html">
+						Storage Management
 						</a>
 						
 						
@@ -608,21 +608,25 @@ var topics = [
 
 	
 	
+	"Development in Galaxy",
+
+	
+	
+	"Galaxy Server administration",
+
+	
+	
+	"Galaxy Server administration",
+
+	
+	
 	"Using Galaxy and Managing your Data",
 
-	
-	
-	"Galaxy Server administration",
-
-	
-	
-	"Galaxy Server administration",
 
 	
 	
 	"Development in Galaxy",
 
-
 	
 	
 	"Galaxy Server administration",
@@ -654,10 +658,6 @@ var topics = [
 	
 	
 	"Galaxy Server administration",
-
-	
-	
-	"Development in Galaxy",
 
 ];
 
@@ -818,7 +818,7 @@ var chart2 = new Chart(ctx2, {
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1700181548'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1700267840'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
