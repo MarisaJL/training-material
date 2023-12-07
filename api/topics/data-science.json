@@ -235,6 +235,10 @@
             "usegalaxy": "false"
           },
           {
+            "url": "http://pepsimili.e-nios.com:8080/",
+            "name": "PepSimili"
+          },
+          {
             "url": "https://galaxy.bio.di.uminho.pt/",
             "name": "PhagePromotor"
           },
