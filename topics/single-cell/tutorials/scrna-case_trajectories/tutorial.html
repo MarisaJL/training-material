@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@f9521ca88b258e80de122e5aab4832aab6c73ce7",
+  release: "galaxy-training-network@9d337511c1006adcf77fb700737550496d0f8f32",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701937742' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701937742' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701941560' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701941560' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-12-07 08:27:45 +0000">
+<meta name="DC.date" content="2023-12-07 09:31:15 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-12-07 08:27:45 +0000",
+  "dateModified": "2023-12-07 09:31:15 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1701937742'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1701941560'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -904,7 +904,7 @@ Sentry.init({
       <li><a href="#re-calculate-nearest-neighbours" id="markdown-toc-re-calculate-nearest-neighbours">Re-calculate Nearest Neighbours</a></li>
       <li><a href="#re-draw-the-fdg" id="markdown-toc-re-draw-the-fdg">Re-draw the FDG</a></li>
       <li><a href="#working-in-a-group-decision-time" id="markdown-toc-working-in-a-group-decision-time">Working in a group? Decision-time!</a></li>
-      <li><a href="#paga" id="markdown-toc-paga">PAGA</a></li>
+      <li><a href="#ppagaartition-based-graph-abstraction-paga" id="markdown-toc-ppagaartition-based-graph-abstraction-paga">PPAGAartition-based Graph Abstraction (PAGA)</a></li>
       <li><a href="#re-draw-force-directed-graph-again" id="markdown-toc-re-draw-force-directed-graph-again">Re-draw force-directed graph (again!)</a></li>
       <li><a href="#plotting-by-genotype" id="markdown-toc-plotting-by-genotype">Plotting by Genotype</a></li>
       <li><a href="#plotting-gene-expression" id="markdown-toc-plotting-gene-expression">Plotting Gene Expression</a></li>
@@ -1169,7 +1169,7 @@ Sentry.init({
     <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>Oh dear! This doesn’t look great. Maybe the DP-M4 cells are a whole other trajectory? That doesn’t seem right. Saying that, this spreads out our T-mature cells, which makes a lot more sense when it comes to T-cell biology (we expect T-cells to differentiate into two types of T-cells, Cd8+Cd4- and Cd4+Cd8-). If you wanted to, you could also re-cluster your cells (since you’ve changed the neighborhood graph on which the clusterisation depends). However, we tried that, and it called far too many clusters given the depth of sequencing in this dataset. Let’s stick with our known cell types and move from there.</li>
+      <li>Oh dear! This doesn’t look great. Maybe the DP-M4 cells are a whole other trajectory? That doesn’t seem right. Saying that this spreads out our T-mature cells, which makes a lot more sense when it comes to T-cell biology (we expect T-cells to differentiate into two types of T-cells, Cd8+Cd4- and Cd4+Cd8-). If you wanted to, you could also re-cluster your cells (since you’ve changed the neighborhood graph on which the clusterisation depends). However, we tried that, and it called far too many clusters given the depth of sequencing in this dataset. Let’s stick with our known cell types and move from there.</li>
     </ol>
 
     <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG2.png" alt="The T mature and DP L clusters have been stretched out. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> FDG Plot after recalculating neighbours from the diffusion map</figcaption></figure>
@@ -1178,7 +1178,7 @@ Sentry.init({
 </blockquote>
 
 <h2 id="working-in-a-group-decision-time">Working in a group? Decision-time!</h2>
-<p>If you are working in a group, you can now divide up a decision here with one <em>control</em> and the rest can vary numbers so that you can compare results throughout the tutorials.</p>
+<p>If you are working in a group, you can now divide up a decision here with one <em>control</em> and the rest can vary in numbers so that you can compare results throughout the tutorials.</p>
 <ul>
   <li>Control
     <ul>
@@ -1199,7 +1199,7 @@ Sentry.init({
   <li>Everyone else: You will want to compare FREQUENTLY with your control team member.</li>
 </ul>
 
-<h2 id="paga">PAGA</h2>
+<h2 id="ppagaartition-based-graph-abstraction-paga">PPAGAartition-based Graph Abstraction (PAGA)</h2>
 
 <p><a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.paga.html">PAGA</a> is used to generalise relationships between groups, or likely clusters, in this case. It will make it much easier to see the trajectories between our clusters of T-cells.</p>
 
@@ -1250,8 +1250,8 @@ Sentry.init({
     <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>The way the clusters are arranged has changed a bit now. The M4 cluster is right in the middle of the M1-3 clusters, rather than heading off on its own. The M1 cluster is looking like it is driving towards differentiation, which is not somthing we had necessarily been able to specify before by just looking at our cluster graphs or applying our biological knowledge.</li>
-      <li>Cd4 and Cd8 expression appears highest in the DP-L cluster. The expression of both Cd4 and Cd8 also appears higher than we might expect in the DP-M4 cluster - perhaps this is a sign that it is closer to the DP-L cluster than it seems in this simple plot.</li>
+      <li>The way the clusters are arranged has changed a bit now. The M4 cluster is right in the middle of the M1-3 clusters, rather than heading off on its own. The M1 cluster is looking like it is driving towards differentiation, which is not something we had necessarily been able to specify before by just looking at our cluster graphs or applying our biological knowledge.</li>
+      <li>Cd4 and Cd8 expression appear highest in the DP-L cluster. The expression of both Cd4 and Cd8 also appears higher than we might expect in the DP-M4 cluster - perhaps this is a sign that it is closer to the DP-L cluster than it seems in this simple plot.</li>
     </ol>
 
     <figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesPAGA.png" alt="DN cluster is on one side of the plot, with the DP L and T mature clusters on the other side. The other clusters are close together in the centre of the plot. Coloured to show higher Cd4 and Cd8 expression in the M4, DP L and T mature clusters." width="1732" height="558" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> PAGA plots coloured by cell type, Cd4 expression, and Cd8 expression</figcaption></figure>
@@ -1261,7 +1261,7 @@ Sentry.init({
 
 <h2 id="re-draw-force-directed-graph-again">Re-draw force-directed graph (again!)</h2>
 
-<p>Force directed graphs can be initialised randomly, or we can prod it in the right direction. We’ll prod it with our PAGA calculations. Note that you could also try prodding it with tSNE or UMAP. A lot of these tools can be used on top of each other or with each other in different ways, this tutorial is just one example. Similarly, you could be using any <strong>obs</strong> information for grouping, so could do this for <em>louvain</em> or <em>cell_type</em> for instance.</p>
+<p>Force-directed graphs can be initialised randomly, or we can prod it in the right direction. We’ll prod it with our PAGA calculations. Note that you could also try prodding it with tSNE or UMAP. A lot of these tools can be used on top of each other or with each other in different ways, this tutorial is just one example. Similarly, you could be using any <strong>obs</strong> information for grouping, so could do this for <em>louvain</em> or <em>cell_type</em> for instance.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-initialise-fdg-using-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Initialise FDG using PAGA</div>
@@ -1441,7 +1441,7 @@ Sentry.init({
     <div class="box-title solution-title" id="solution-6"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-6" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>When we look at the cell type and DPT plots, we can see that there’s a clear progresion from our root DN cells, through the various groups of DP cells, into DP-L and then T-mat. This matches with our expectations that the DP-L and DP-mat clusters represent later stages in T-cell development. The DPT plot also confirms that the DP-M4 cluster is heading towards differentiation, which makes sense given its position on our FDG plot.</li>
+      <li>When we look at the cell type and DPT plots, we can see that there’s a clear progression from our root DN cells, through the various groups of DP cells, into DP-L and then T-mat. This matches with our expectations that the DP-L and DP-mat clusters represent later stages in T-cell development. The DPT plot also confirms that the DP-M4 cluster is heading towards differentiation, which makes sense given its position on our FDG plot.</li>
     </ol>
 
     <figure id="figure-7" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDGPseudotime.png" alt="Cells in DN cluster are coloured as earliest in pseudotime, which increases through clusters M1 to M4, into cluster DP L and is latest in T mature. " width="1203" height="532" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> FDG plots showing cell types and pseudotime</figcaption></figure>
@@ -1670,7 +1670,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/f9521ca88b258e80de122e5aab4832aab6c73ce7">f9521ca</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/9d337511c1006adcf77fb700737550496d0f8f32">9d33751</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1698,7 +1698,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1701937742'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1701941560'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
