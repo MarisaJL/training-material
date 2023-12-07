@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@bacf6aecffef5b657dbbd9fbb46fa5017fbc0bbb",
+  release: "galaxy-training-network@f9521ca88b258e80de122e5aab4832aab6c73ce7",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701937563' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701937563' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701937742' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701937742' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-12-07 08:24:45 +0000">
+<meta name="DC.date" content="2023-12-07 08:27:45 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-12-07 08:24:45 +0000",
+  "dateModified": "2023-12-07 08:27:45 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1701937563'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1701937742'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -901,7 +901,7 @@ Sentry.init({
       <li><a href="#draw-force-directed-graph" id="markdown-toc-draw-force-directed-graph">Draw force-directed graph</a></li>
       <li><a href="#plot-the-fdg" id="markdown-toc-plot-the-fdg">Plot the FDG</a></li>
       <li><a href="#diffusion-maps" id="markdown-toc-diffusion-maps">Diffusion maps</a></li>
-      <li><a href="#recalculate-nearest-neighbours" id="markdown-toc-recalculate-nearest-neighbours">Recalculate Nearest Neighbours</a></li>
+      <li><a href="#re-calculate-nearest-neighbours" id="markdown-toc-re-calculate-nearest-neighbours">Re-calculate Nearest Neighbours</a></li>
       <li><a href="#re-draw-the-fdg" id="markdown-toc-re-draw-the-fdg">Re-draw the FDG</a></li>
       <li><a href="#working-in-a-group-decision-time" id="markdown-toc-working-in-a-group-decision-time">Working in a group? Decision-time!</a></li>
       <li><a href="#paga" id="markdown-toc-paga">PAGA</a></li>
@@ -996,7 +996,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1" title="Manipulate AnnData tool" aria-role="link"><strong>Manipulate AnnData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Annotated data matrix”</em>: <code class="language-plaintext highlighter-rouge">output</code> (Input dataset)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Annotated data matrix”</em>: <code class="language-plaintext highlighter-rouge">Final cell annotated object</code> (Input dataset)</li>
         <li><em>“Function to manipulate the object”</em>: <code class="language-plaintext highlighter-rouge">Filter observations or variables</code>
           <ul>
             <li><em>“What to filter?”</em>: <code class="language-plaintext highlighter-rouge">Observations (obs)</code></li>
@@ -1025,7 +1025,7 @@ Sentry.init({
 
 <h2 id="draw-force-directed-graph">Draw force-directed graph</h2>
 
-<p>First, we will calculate a <a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.draw_graph.html">force-directed graph</a>, as an alternate to tSNE, which will likely work better for trajectory analysis.</p>
+<p>First, we will calculate a <a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.draw_graph.html">force-directed graph</a> (FDG), as an alternate to tSNE, which will likely work better for trajectory analysis.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-draw-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Draw FDG</div>
@@ -1033,7 +1033,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="link"><strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">anndata</code> (output of <strong>Manipulate AnnData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">T-cell_object.h5ad</code> (output of <strong>Manipulate AnnData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">history-share</span> <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Graph layout”</em>: <code class="language-plaintext highlighter-rouge">fa</code></li>
       </ul>
@@ -1058,7 +1058,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1072,7 +1072,7 @@ Sentry.init({
   <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
-    <li>What has the FDG done to our clusters of T cells and what might this suggest about the relationships between these groups?</li>
+    <li>What has the FDG done to our clusters of T-cells and what might this suggest about the relationships between these groups?</li>
   </ol>
 
   <blockquote class="solution">
@@ -1097,7 +1097,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_diffmap/scanpy_run_diffmap/1.8.1+galaxy9" title="Scanpy DiffusionMap tool" aria-role="link"><strong>Scanpy DiffusionMap</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_diffmap/scanpy_run_diffmap/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Number of diffusion components to calculate”</em>: <code class="language-plaintext highlighter-rouge">15</code></li>
       </ul>
 
@@ -1111,7 +1111,7 @@ Sentry.init({
 
 </blockquote>
 
-<h2 id="recalculate-nearest-neighbours">Recalculate Nearest Neighbours</h2>
+<h2 id="re-calculate-nearest-neighbours">Re-calculate Nearest Neighbours</h2>
 
 <p>Now that we have our diffusion map, we need to re-calculate neighbors using the diffusion map instead of the PCs.</p>
 
@@ -1121,8 +1121,8 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy9" title="Scanpy ComputeGraph tool" aria-role="link"><strong>Scanpy ComputeGraph</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy DiffusionMap</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
-        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">history-share</span> <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">DiffusionMap Anndata</code> (output of <strong>Scanpy DiffusionMap</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Use the indicated representation”</em>: <code class="language-plaintext highlighter-rouge">X_diffmap</code></li>
       </ul>
     </li>
@@ -1140,14 +1140,14 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="link"><strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy ComputeGraph</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
-        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">history-share</span> <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">Graph object Anndata</code> (output of <strong>Scanpy ComputeGraph</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Graph layout”</em>: <code class="language-plaintext highlighter-rouge">fa</code></li>
       </ul>
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1201,7 +1201,7 @@ Sentry.init({
 
 <h2 id="paga">PAGA</h2>
 
-<p><a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.paga.html">PAGA</a> is used to generalise relationships between groups, or likely clusters, in this case. It will make it much easier to see the trajectories between our clusters of T cells.</p>
+<p><a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.paga.html">PAGA</a> is used to generalise relationships between groups, or likely clusters, in this case. It will make it much easier to see the trajectories between our clusters of T-cells.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-plot-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot PAGA</div>
@@ -1209,7 +1209,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_paga/scanpy_run_paga/1.8.1+galaxy9" title="Scanpy PAGA tool" aria-role="link"><strong>Scanpy PAGA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_paga/scanpy_run_paga/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Name of the clustering”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
       </ul>
 
@@ -1221,10 +1221,10 @@ Sentry.init({
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_trajectory/scanpy_plot_trajectory/1.8.1+galaxy9" title="Scanpy PlotTrajectory tool" aria-role="link"><strong>Scanpy PlotTrajectory</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_trajectory/scanpy_plot_trajectory/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy PAGA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">PAGA object Anndata</code> (output of <strong>Scanpy PAGA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Layout functions”</em>: <code class="language-plaintext highlighter-rouge">ForceAtlas2</code></li>
         <li><em>“Location of legend”</em>: <code class="language-plaintext highlighter-rouge">On data</code></li>
-        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">history-share</span> <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Name of cell annotation or gene that is used to color the nodes”</em>: <code class="language-plaintext highlighter-rouge">cell_type,ENSMUSG00000023274,ENSMUSG00000053977</code></li>
       </ul>
 
@@ -1269,15 +1269,15 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="link"><strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy PlotTrajectory</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
-        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">history-share</span> <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">Plotted PAGA Anndata</code> (output of <strong>Scanpy PlotTrajectory</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><em>“Use programme defaults”</em>: <i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Method to initialise embedding, any key for adata.obsm or choose from the preset methods”</em>: <code class="language-plaintext highlighter-rouge">paga</code></li>
         <li><em>“Graph layout”</em>: <code class="language-plaintext highlighter-rouge">fa</code></li>
       </ul>
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1319,7 +1319,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">genotype</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1351,7 +1351,7 @@ Sentry.init({
 
 <h2 id="plotting-gene-expression">Plotting Gene Expression</h2>
 
-<p>We’re also interested in the expression of the two genes that are known to be markers of the two different types of mature T cells, Cd4 and Cd8. We can colour in our plot to show which cells are expressing these genes.</p>
+<p>We’re also interested in the expression of the two genes that are known to be markers of the two different types of mature T-cells, Cd4 and Cd8. We can colour in our plot to show which cells are expressing these genes.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-plot-for-gene-expression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot for gene expression</div>
@@ -1359,7 +1359,7 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">ENSMUSG00000023274,ENSMUSG00000053977</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1412,14 +1412,14 @@ Sentry.init({
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_dpt/scanpy_run_dpt/1.8.1+galaxy9" title="Scanpy DPT tool" aria-role="link"><strong>Scanpy DPT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_dpt/scanpy_run_dpt/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">FDG object Anndata</code> (output of <strong>Scanpy RunFDG</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Name of attribute that defines clustering”</em>: <code class="language-plaintext highlighter-rouge">cell_type</code></li>
         <li><em>“Name of the clustering that defines the root cell type”</em>: <code class="language-plaintext highlighter-rouge">DN</code></li>
       </ul>
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="link"><strong>Scanpy PlotEmbed</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9</span></span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">output_h5ad</code> (output of <strong>Scanpy DPT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input object in AnnData/Loom format”</em>: <code class="language-plaintext highlighter-rouge">Diffusion pseudotime inference Anndata</code> (output of <strong>Scanpy DPT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“name of the embedding to plot”</em>: <code class="language-plaintext highlighter-rouge">draw_graph_fa</code></li>
         <li><em>“color by attributes, comma separated texts”</em>: <code class="language-plaintext highlighter-rouge">cell_type,dpt_pseudotime</code></li>
         <li><em>“Use raw attributes if present”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -1670,7 +1670,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/bacf6aecffef5b657dbbd9fbb46fa5017fbc0bbb">bacf6ae</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/f9521ca88b258e80de122e5aab4832aab6c73ce7">f9521ca</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1698,7 +1698,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1701937563'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1701937742'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
