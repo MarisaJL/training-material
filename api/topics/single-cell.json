@@ -5389,6 +5389,10 @@
           "nomadscientist",
           "wee-snufkin",
           "mtekman"
+        ],
+        "editing": [
+          "pavanvidem",
+          "hexylena"
         ]
       },
       "short_id": null,
@@ -5577,6 +5581,34 @@
           "id": "mtekman",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/mtekman.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mtekman/"
+        },
+        {
+          "name": "Pavankumar Videm",
+          "orcid": "0000-0002-5192-126X",
+          "joined": "2017-09",
+          "id": "pavanvidem",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/pavanvidem.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
+        },
+        {
+          "name": "Helena Rasche",
+          "email": "hexylena@galaxians.org",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "fediverse": "https://galaxians.garden/hexylena",
+          "fediverse_flavor": "akkoma",
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
       "urls": {
