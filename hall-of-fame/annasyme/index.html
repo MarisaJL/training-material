@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@ce699c99728f4821acb3ad7a69c439cb21596f21",
+  release: "galaxy-training-network@5e60802d46b1c0c7ee4e187f4a59be54f7f422e5",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701995939' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701995939' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1702019294' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1702019294' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -68,7 +68,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1701995939'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1702019294'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -327,12 +327,46 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/genome-annotation">
-							Genome Annotation
+						<a href="/training-material/topics/variant-analysis">
+							Variant Analysis
 						</a>
 						/
-						<a href="/training-material//topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.html">
-						Genome annotation with Prokka
+						<a href="/training-material//topics/variant-analysis/tutorials/microbial-variants/tutorial.html">
+						Microbial Variant Calling
+						</a>
+						
+						
+	
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/introduction">
+							Introduction to Galaxy Analyses
+						</a>
+						/
+						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-short/tutorial.html">
+						A short introduction to Galaxy
+						</a>
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/assembly">
+							Assembly
+						</a>
+						/
+						<a href="/training-material//topics/assembly/tutorials/chloroplast-assembly/tutorial.html">
+						Chloroplast genome assembly
 						</a>
 						
 						
@@ -378,46 +412,12 @@ Sentry.init({
 					<li>
 						
 						
-						<a href="/training-material/topics/assembly">
-							Assembly
+						<a href="/training-material/topics/genome-annotation">
+							Genome Annotation
 						</a>
 						/
-						<a href="/training-material//topics/assembly/tutorials/chloroplast-assembly/tutorial.html">
-						Chloroplast genome assembly
-						</a>
-						
-						
-	
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/introduction">
-							Introduction to Galaxy Analyses
-						</a>
-						/
-						<a href="/training-material//topics/introduction/tutorials/galaxy-intro-short/tutorial.html">
-						A short introduction to Galaxy
-						</a>
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-					</li>
-				
-					<li>
-						
-						
-						<a href="/training-material/topics/variant-analysis">
-							Variant Analysis
-						</a>
-						/
-						<a href="/training-material//topics/variant-analysis/tutorials/microbial-variants/tutorial.html">
-						Microbial Variant Calling
+						<a href="/training-material//topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.html">
+						Genome annotation with Prokka
 						</a>
 						
 						
@@ -530,7 +530,7 @@ Sentry.init({
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffbdf1; --color-darker: #ff96eb; --color-dimmed: #ffaaee;">cofest</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffb9f0; --color-darker: #ff92eb; --color-dimmed: #ffa6ed;">cofest</span>
 
     <hr/>
     <p class="card-text">
@@ -564,19 +564,7 @@ var topics = [
 
 	
 	
-	"Genome Annotation",
-
-	
-	
-	"Assembly",
-
-	
-	
-	"Assembly",
-
-	
-	
-	"Assembly",
+	"Variant Analysis",
 
 	
 	
@@ -584,7 +572,19 @@ var topics = [
 
 	
 	
-	"Variant Analysis",
+	"Assembly",
+
+	
+	
+	"Assembly",
+
+	
+	
+	"Assembly",
+
+	
+	
+	"Genome Annotation",
 
 	
 	
@@ -710,7 +710,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/ce699c99728f4821acb3ad7a69c439cb21596f21">ce699c9</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5e60802d46b1c0c7ee4e187f4a59be54f7f422e5">5e60802</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -738,7 +738,7 @@ var chart2 = new Chart(ctx2, {
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1701995939'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1702019294'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

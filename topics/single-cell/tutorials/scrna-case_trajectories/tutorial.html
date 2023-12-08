@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@ce699c99728f4821acb3ad7a69c439cb21596f21",
+  release: "galaxy-training-network@5e60802d46b1c0c7ee4e187f4a59be54f7f422e5",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -41,8 +41,8 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1701995939' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1701995939' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1702019294' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1702019294' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -52,7 +52,7 @@ Sentry.init({
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring Trajectories using Scanpy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-12-07 13:31:44 +0000">
+<meta name="DC.date" content="2023-12-08 07:06:48 +0000">
 <meta name="DC.creator" content="Marisa Loach">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Julia Jakiela">
@@ -96,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-12-07 13:31:44 +0000",
+  "dateModified": "2023-12-08 07:06:48 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Inferring Trajectories using Scanpy",
   "interactivityType": "mixed",
@@ -340,7 +340,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1701995939'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1702019294'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -679,6 +679,10 @@ Sentry.init({
                         
                     
                         
+                    
+                        
+                    
+                        
                             
                             <li> Combining datasets after pre-processing:
                             
@@ -688,10 +692,6 @@ Sentry.init({
                                 
                             
                             </li>
-                        
-                    
-                        
-                    
                         
                     
                         
@@ -858,7 +858,7 @@ Sentry.init({
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 7, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 8, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -883,7 +883,7 @@ Sentry.init({
 
 <p>You’ve done all the hard work of preparing a single-cell matrix, processing it, plotting it, interpreting it, and finding lots of lovely genes. Now you want to infer trajectories, or relationships between cells… you can do that here, using the Galaxy interface, or head over to the <a href="/training-material/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html">Jupyter notebook version of this tutorial</a> to learn how to perform the same analysis using Python.</p>
 
-<p>Traditionally, we thought that differentiating or changing cells jumped between discrete states, so ‘Cell A’ became ‘Cell B’ as part of its maturation. However, most data shows otherwise. Generally, there is a spectrum (a ‘trajectory’, if you will…) of small, subtle changes along a pathway of that differentiation. Trying to analyse cells every 10 seconds can be pretty tricky, so ‘pseudotime’ analysis takes a single sample and assumes that those cells are all on slightly different points along a path of differentiation. Some cells might be slightly more mature and others slightly less, all captured at the same ‘time’. We ‘assume’ or ‘infer’ relationships between cells.</p>
+<p>Traditionally, we thought that differentiating or changing cells jumped between discrete states, so ‘Cell A’ became ‘Cell B’ as part of its maturation. However, most data shows otherwise. Generally, there is a spectrum (a ‘trajectory’, if you will…) of small, subtle changes along a pathway of that differentiation. Trying to analyse cells every 10 seconds can be pretty tricky, so ‘pseudotime’ analysis takes a single sample and assumes that those cells are all on slightly different points along a path of differentiation. Some cells might be slightly more mature and others slightly less, all captured at the same ‘time’.  These cells are sorted accordingly along these pseudotime paths of differentiation to build a continuum of cells from one state to the next.  We therefore ‘assume’ or ‘infer’ relationships between from this continuum of cells.</p>
 
 <p>We will use the same sample from the previous three tutorials, which contains largely T-cells in the thymus. We know T-cells differentiate in the thymus, so we would assume that we would capture cells at slightly different time points within the same sample. Furthermore, our cluster analysis alone showed different states of T-cells. Now it’s time to look further!</p>
 
@@ -988,6 +988,7 @@ Sentry.init({
   <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
   <ul>
     <li>The Galaxy tool search panel sometimes doesn’t find the tools we need from the thousands available.</li>
+    <li>Note that you can favourite any tool for quick retrieval via the ★ symbol at the top of each tool, and at the top of Tools side-menu.</li>
     <li>You’ll have a much easier time selecting tools from the panel (if you aren’t using tutorial mode!) if you are on the <a href="https://humancellatlas.usegalaxy.eu">humancellatlas.usegalaxy.eu</a></li>
   </ul>
 </blockquote>
@@ -1095,7 +1096,7 @@ Sentry.init({
 
 <h2 id="diffusion-maps">Diffusion maps</h2>
 
-<p>We’ll now perform an <em>optional step</em>, that basically takes the place of the PCA. Instead of using PCs, we can use <a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.diffmap.html">diffusion maps</a>.</p>
+<p>We’ll now perform an <em>optional step</em>, that basically takes the place of the standard Principle Component Analysis (PCA). Instead of using PCs, we can use <a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.diffmap.html">diffusion maps</a>.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-draw-the-diffusion-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Draw the Diffusion Map</div>
@@ -1138,7 +1139,7 @@ Sentry.init({
 
 <h2 id="re-draw-the-fdg">Re-draw the FDG</h2>
 
-<p>Now that we’ve recalculated the nearest neighbours, we can use these new neighbours to re-draw the FDG to see how this changes the plot.</p>
+<p>Now that we’ve re-calculated the nearest neighbours, we can use these new neighbours to re-draw the FDG to see how this changes the plot.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-plot-a-new-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot a new FDG</div>
@@ -1305,7 +1306,7 @@ Sentry.init({
     <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>The interesting change here is that our DP-M4 cells are now heading on a clear trajectory towards differentiation. It looks like we’ve got the correct ordering of cells from DN through the DP groups and on towards T-mature. We didn’t see this in our previous plots.</li>
+      <li>The interesting change here occurs between the Double Negative (DN) and Double Positive Module 4 (DP-M4) cells. Our DP-M4 cells are now heading on a clear trajectory towards differentiation. It looks like we’ve got the correct ordering of cells from DN through the DP groups and on towards T-mature. We didn’t see this in our previous plots.</li>
     </ol>
 
     <figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="../../images/scrna-case_trajectories/TrajectoriesFDG3.png" alt="The M4 cluster is now closer to the DP L cluster. " width="498" height="514" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> FDG plot initiated from the PAGA plot</figcaption></figure>
@@ -1676,7 +1677,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/ce699c99728f4821acb3ad7a69c439cb21596f21">ce699c9</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5e60802d46b1c0c7ee4e187f4a59be54f7f422e5">5e60802</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1704,7 +1705,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1701995939'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1702019294'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
