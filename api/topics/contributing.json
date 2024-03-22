@@ -271,9 +271,9 @@
         ],
         "inexact": [
           {
-            "url": "https://galaxy.metacentrum.cz/",
-            "name": "MetaCentrum",
-            "usegalaxy": "false"
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
           }
         ]
       },
@@ -2309,13 +2309,13 @@
             "usegalaxy": "false"
           },
           {
-            "url": "https://galaxy.metacentrum.cz/",
-            "name": "MetaCentrum",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://usegalaxy.be/",
             "name": "UseGalaxy.be",
+            "usegalaxy": "true"
+          },
+          {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
             "usegalaxy": "true"
           },
           {
@@ -2359,6 +2359,10 @@
             "url": "https://mississippi.sorbonne-universite.fr",
             "name": "MISSISSIPPI",
             "usegalaxy": "false"
+          },
+          {
+            "url": "https://galaxy.bio.di.uminho.pt/",
+            "name": "PhagePromotor"
           }
         ]
       },
