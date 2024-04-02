@@ -371,6 +371,11 @@
         ],
         "inexact": [
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.no/",
             "name": "UseGalaxy.no",
             "usegalaxy": "true"
@@ -828,6 +833,11 @@
             "usegalaxy": "true"
           },
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -1081,6 +1091,11 @@
             "usegalaxy": "false"
           },
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.no/",
             "name": "UseGalaxy.no",
             "usegalaxy": "true"
@@ -1292,6 +1307,11 @@
             "usegalaxy": "false"
           },
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
             "usegalaxy": "true"
@@ -1463,6 +1483,11 @@
           }
         ],
         "inexact": [
+          {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
@@ -2032,6 +2057,11 @@
       "supported_servers": {
         "exact": [
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -2316,6 +2346,11 @@
       ],
       "supported_servers": {
         "exact": [
+          {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
@@ -2936,6 +2971,11 @@
             "usegalaxy": "true"
           },
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
             "usegalaxy": "true"
@@ -3474,6 +3514,11 @@
         ],
         "inexact": [
           {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          },
+          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -3660,7 +3705,11 @@
           }
         ],
         "inexact": [
-
+          {
+            "url": "https://usegalaxy.cz/",
+            "name": "UseGalaxy.cz",
+            "usegalaxy": "true"
+          }
         ]
       },
       "topic_name_human": "Variant Analysis",
