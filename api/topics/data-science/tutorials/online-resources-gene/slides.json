@@ -95,12 +95,13 @@
         "usegalaxy": "false"
       },
       {
-        "url": "http://pepsimili.e-nios.com:8080/",
-        "name": "PepSimili"
+        "url": "https://mississippi.sorbonne-universite.fr",
+        "name": "MISSISSIPPI",
+        "usegalaxy": "false"
       },
       {
-        "url": "https://galaxy.bio.di.uminho.pt/",
-        "name": "PhagePromotor"
+        "url": "http://pepsimili.e-nios.com:8080/",
+        "name": "PepSimili"
       },
       {
         "url": "https://usegalaxy.be/",
