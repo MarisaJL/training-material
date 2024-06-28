@@ -110,6 +110,15 @@
         "name": "PepSimili"
       },
       {
+        "url": "https://galaxy.bio.di.uminho.pt/",
+        "name": "PhagePromotor"
+      },
+      {
+        "url": "https://usegalaxy.be/",
+        "name": "UseGalaxy.be",
+        "usegalaxy": "true"
+      },
+      {
         "url": "https://usegalaxy.no/",
         "name": "UseGalaxy.no",
         "usegalaxy": "true"
