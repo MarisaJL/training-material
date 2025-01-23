@@ -618,11 +618,12 @@ Rather than just looking at a list of genes, we can also produce plots to help u
 > 3. When we plot the cells along the PC axes (in the next step) do you expect to see differences in the expression of these genes along the associated axis?
 >
 > > <solution-title></solution-title>
-> >
-> > 1. <div class="Separate-Preprocessing-Steps" markdown="1">The list produced by the `RunPCA` function shows the genes that were most strongly positively and negatively assocated with each PC. The top positively associated genes were CST3 for PC1, CD79A for PC2, and HLA-DQA1 for PC3. The top negatively associated genes were MALAT1 for PC1, NKG7 for PC2, and PPBP for PC3. However, these top genes don't define the PCs by themselves - they are part of groups of genes that showed correlated patterns of expression. The figures show us more information about the top genes. We can see the top 30 genes in each of these groups on the plots. We can also see how strongly each of these genes was associated with the PC.
+> > 1. The list produced by the `RunPCA` function shows the genes that were most strongly positively and negatively assocated with each PC.
+> >    <div class="Separate-Preprocessing-Steps" markdown="1">
+> > The top positively associated genes were CST3 for PC1, CD79A for PC2, and HLA-DQA1 for PC3. The top negatively associated genes were MALAT1 for PC1, NKG7 for PC2, and PPBP for PC3. However, these top genes don't define the PCs by themselves - they are part of groups of genes that showed correlated patterns of expression. The figures show us more information about the top genes. We can see the top 30 genes in each of these groups on the plots. We can also see how strongly each of these genes was associated with the PC.
 > >    </div>
 > >    <div class="SCTransform" markdown="1">
-> >    The list produced by the `RunPCA` function shows the genes that were most strongly positively and negatively assocated with each PC. The top positively associated genes were MALAT1 for PC1, NKG7 for PC2, and S100A8 for PC3, while the top negatively associated genes were FTL for PC1, HLA-DRA for PC2, and CD74 for PC3. However, these top genes don't define the PCs by themselves - they are part of groups of genes that showed correlated patterns of expression. The figures show us more information about the top genes. We can see the top 30 genes in each of these groups on the plots. We can also see how strongly each of these genes was associated with the PC.
+> > The top positively associated genes were MALAT1 for PC1, NKG7 for PC2, and S100A8 for PC3, while the top negatively associated genes were FTL for PC1, HLA-DRA for PC2, and CD74 for PC3. However, these top genes don't define the PCs by themselves - they are part of groups of genes that showed correlated patterns of expression. The figures show us more information about the top genes. We can see the top 30 genes in each of these groups on the plots. We can also see how strongly each of these genes was associated with the PC.
 > >    </div>
 > >
 > > 2. We can see that some of our highly variable genes are associated with the top PCs. For example, FTL is one of the top genes associated with PC1. We should expect to see some of our highly variable genes here as we used the features we selected to perform the PCA. It also makes sense that our top 10 variable genes are strongly associated with PCs, because we know these are the genes that varied most across the dataset and the PCA was looking for these strong differences in expression. However, a gene that varied a lot won't necessarily be associated with a top PC unless its expression correlates with other variable genes - a group of correlated genes is likely to have a stronger impact than a single gene, even if that one gene varies a lot.
@@ -709,8 +710,10 @@ You should now have two plots showing the expression of these genes on different
 >
 > > <solution-title></solution-title>
 > > 1. When we look at the expression of our top genes along PCs 1 and 2 we see that, as expected, the top positively associated gene for PC1, CST3, is almost exclusively expressed in cells at the positive end of the PC1 (horizontal) axis. The pattern is less clear for the negatively associated MALAT1 as most cells are expressing it, but if we look closely we can see that the expression is higher in cells at the negative end of the PC1 axis. We can see similar patterns for the top genes associated with PC2. The top positively associated gene, CD79A is mainly expressed by the cells closest to the top of the PC2 (vertical) axis. The top negative gene NKG7 is mainly expressed by cells along the lower half of the PC2 axis.
+> >
 > >    We don't see similar patterns for the genes associated with PC3 in this figure - although these genes are only expressed in parts of the plot, there is no clear relationship with either the PC1 or PC2 axes. This is exactly what we would expect to see - these genes are associated with PC3 so they shouldn't show any relationship with the axes.
 > > 2. The picture looks very different when we plot our cells along PC2 and PC3. We can see two clumps of cells close together at the top of the plot and another small group of cells spread down the middle of the plot. This is why we have to be careful when interpreting dimensional reduction plots - the data can look very different depending on which of the many axes we choose to visualise.
+> >
 > >    Now it is the top genes for PC1 that don't show any relationship with the axes. The top genes for PC2 still show differences in expression along the PC2 axis (now the horizontal axis) - and these actually look a bit clearer than in the previous plot. We can also see how the top genes for PC3 relate to the PC3 (vertical) axis. The positively associated HLA-DQA1 is mostly expressed by cells at the top of the axis while the negatively associated PPBP is mostly expressed along the negative part of that axis.
 > {: .solution}
 {: .question}
@@ -729,8 +732,10 @@ You should now have two plots showing the expression of these genes on different
 >
 > > <solution-title></solution-title>
 > > 1. When we look at the expression of our top genes along PCs 1 and 2 we see that, as expected, the top positively associated gene for PC1, MALAT1, is expressed at higher levels in cells at the positive end of the PC1 (horizontal) axis while the top negatively associated gene, FTL, is expressed mainly at the negative end. The pattern isn't as clear for these genes as it is for the other PCs we plotted, because both MALAT1 and FTL are expressed to some extent by most of the cells in our plots. We can see more obvious patterns for the top genes associated with PC2. The top positively associated gene, NKG7 is mainly expressed by the cells at the positive end of the PC2 (vertical) axis. The top negative gene HLA-DRA is mainly expressed by cells along the lower half of the PC2 axis.
+> >
 > >    We don't see similar patterns for the genes associated with PC3 in this figure - although these genes are only expressed in parts of the plot, there is no clear relationship with either the PC1 or PC2 axes. This is exactly what we would expect to see - these genes are associated with PC3 so they shouldn't show any relationship with the PC1 and PC2 axes.
 > > 2. The picture looks very different when we plot our cells along PC2 and PC3. We can see two long lines of cells forming an upside-down 'V'. This is why we have to be careful when interpreting dimensional reduction plots - the data can look very different depending on which of the many axes we choose to visualise.
+> >
 > >    Now it is the top genes for PC1 that don't show any relationship with the axes. The top genes for PC2 still show differences in expression along the PC2 axis (now the horizontal axis). We can also see how the top genes for PC3 relate to the PC3 (vertical) axis. The positively associated S100A8 is mostly expressed by cells at the top of the axis while the negatively associated CD74 is mostly expressed along the negative part of that axis.
 > {: .solution}
 {: .question}
@@ -788,8 +793,10 @@ Another option for visualising our PCA results is to use `DimHeatmap` to produce
 >
 > > <solution-title></solution-title>
 > > 1. The bottom row of the heatmap shows the PCA scores for the top positive gene associated with PC1, in the top cells for this PC. We can see that most cells on the left side of the heatmap are coloured yellow in this row, indicating they scored highly for this gene. Almost all of the cells on the right side are black or pink in this bottom row, indicating lower scores for the gene. Meanwhile, we see the opposite for the top negative gene associated with PC1, which appears in the topmost row of the heatmap. Cells (columns) that scored highly for the top positive gene had low scores for the top negative gene, while those that had low scores for the top positive gene showed high scores for the top negative gene.
+> >
 > >    Clearly, there is strong variation in these genes across the cells in the plot - and that variation isn't just in these two genes, but also in the 28 other genes in this heatmap. These are the two correlated groups of genes that define the first PC. Half the genes were more highly expressed in cells at one end of the PC while the other half were expressed more at the other end of the PC.
 > > 2. Each of the plots for the top PCs distinguishes very clearly between two groups of cells. For each of the top PCs, one group (the left side of the plot) scored highly for most of the genes positively associated with the PC and usually had low scores for the genes negatively associated with the PC. The second group (the right side of the plot) showed the opposite, with low scores for positively associated genes and high scores for negatively associated genes.
+> >
 > >    The distinction becomes less clear in later PCs, with more cells showing different patterns to the rest and a less obvious distinction between the two sides of the plots. This makes sense, because the top PCs are the ones that explained the greatest amount of variation in the data, so they are linked to very clear patterns of expression across many cells. The later PCs didn't explain much variation because they aren't linked with such obvious patterns.
 > > 3. The most useful plot might depend on your own preferences as well as the data you're analysing, but the DimHeatmap is often best for identifying which PCs will be most interesting for downstream analysis. Both cells and genes are ordered by their PCA scores on these plots, so you can see which PCs have the strongest impact on the most numbers of cells while also identifying the sets of features associated with different PCs. You can also limit the number of cells being plotted if you want to focus on the most extreme cells for each PC.
 > {: .solution}
@@ -830,11 +837,14 @@ The Elbow Plot ranks the PCs based on the percentage of variance that each of th
 > > <solution-title></solution-title>
 > > <div class="Separate-Preprocessing-Steps" markdown="1">
 > > 1. As with many decisions in single cell analysis, there isn't an exact method for deciding how many PCs we should use. The elbow or bend in our plot appears to be around PC9-10, so we'll use 10 dimensions in this tutorial, but you could justifiably choose anywhere between about PC7 to PC12 on the basis of this plot. It is usually better to err on the higher side than to get rid of PCs that might be useful. Sometimes it is worth repeating the analysis with different numbers of PCs to see how it affects the results.
+> >
 > >    As always, it is also important to consider biology when making your decision. In this case, an expert might have spotted that the genes strongly associated with PCs 12 and 13 are known markers for certain rare subtypes of immune cells (e.g. MZB1 is a marker for Plasmacytoid Dendritic cells). However, these cells are so rare that we're unlikely to find many in a dataset of this size, so these PCs might not be that useful here. In a larger dataset or one that was enriched for these cell types, we might decide to include these PCs in our analysis because of these genes. Since we only have 2700 cells, we can't be sure that this is a true biological signal rather than just noise, so we'll stick with the top 10 PCs on the basis of our Elbow Plot.
+> >
 > >    It's also worth noting that we calcualted 50 PCs earlier, but only plotted 30 of them here as we wouldn't expect to need all 50 to explain this small dataset (especially after seeing the weaker patterns in those later heatmaps) - if we didn't see a clear bend in this plot, we could try plotting all 50 PCs instead.
 > > </div>
 > > <div class="SCTransform" markdown="1">
 > > 1. The plot shows a sharp elbow or bend at around PC10, but there is a gradual slope down towards the x-axis after this rather than an immediate drop to the bottom. In order to capture some of this additional variation for our analysis, we might decide to include 30 PCs. The curve of dots is much flatter and closer to the x-axis after this point, so the additional PCs won't explain much more of the variation.
+> >
 > >    We can actually use more PCs when we preprocess with SCTransform than if we used the separate preprocessing tools because the more effective normalisation method seems to be better at removing technical effects from the data. When we preprocess with SCTransform, we assume that higher PCs are more likely to represent subtle biological variation rather than technical effects, so we might improve our results by including more of them.
 > > </div>
 > {: .solution}
@@ -960,8 +970,10 @@ Now we can visualise the UMAP, just as we did with the PCA. We can also colour i
 >
 > > <solution-title></solution-title>
 > > 1. We have three main groups of cells in our plot and they are more clearly separated here than the cells in our PCA plot. Since the cells have been coloured by the cluster they were assigned to by the `FindClusters` algorithm, we can see that we have identified <span class="Separate-Preprocessing-Steps">9</span><span class="SCTransform">12</span> clusters in our data. The first cluster is numbered as zero. If you have tried both preprocessing routes in this tutorial, you will see that we identified more clusters when using SCTransform (12 of them) than with the separate preprocessing tools (only nine!). It seems that preprocessing with SCTransform enables us to capture more of the biological variation.
+> >
 > >    Only one of the three main clumps of cells is made up of a single cluster (cluster 3). The other two big groups have been split up into different clusters by the algorithm, suggesting that there are some differences within them - this is one of the reasons we don't just want to rely on our eyes when identifying clusters. The UMAP can give us a quick overview of the data and our clusters, but we must be careful about overinterpreting it. We can't see everything about the data just be looking!
 > > 2. Although this plot looks somewhat different from our PCA plot, we can still see patterns in the expression of the top genes that were associated with our PCs. The top positive and negative genes associated with PCs 1, 2, and 3 are expressed in different parts of the UMAP plot.  This makes sense, because we used the PCA to make the UMAP, so the cells that were at different ends of the PC axes should be in different parts of the UMAP plot too. We don't see the same relationships between the genes and the axes, because we're now looking at a UMAP plot not a PCA plot - the UMAP axes are not the same as the PCA axes!
+> >
 > >    As well as the broader patterns across the plot, we can also see some relationships between the top genes and specific clusters. <span class="Separate-Preprocessing-Steps">The top negative gene for PC2, NKG7, is expressed at the highest level in cluster 6 and at a slightly lower level in the adjacent cluster 4.</span>The top negative gene for PC1, FTL, is expressed in both the neighbouring clusters 1 and 6, but the top positive gene for PC3, S100A8, is only expressed in cluster 1.<span class="SCTransform"></span> This must be one of the genes that caused the clustering algorithm to assign these cells into separate clusters even though they are part of the same larger group on the plot. Again, this makes sense because we used the PCA reduction to create the neighborhood graph that we then used to identify our clusters.
 > {: .solution}
 {: .question}
@@ -1000,8 +1012,7 @@ UMAP plots aren't the only way to see what is going on with the clusters we've j
 > 2. Do you find it easier to understand gene expression with the violin plots or the UMAPs we coloured by expression in the last step?
 >
 > > <solution-title></solution-title>
-> > 1. We can see the same expression patterns in the violin plots as we did in the UMAP feature plots. <span class="Separate-Preprocessing-Steps">For example, MALAT1 is expressed across most of the clusters while PPBP is only expressed in cluster 8.</span><span class="SCTransform">*For example, S100A8 expression is highest in cluster 1.</span>
-> >    We can also see that there is some expression of the top genes outside the clusters they are most highly expressed in, although usually at low levels in a small number of cells. <span class="Separate-Preprocessing-Steps">One exception we can see on this plot is a cell in cluster 1 that expressed very high levels of HLA-DQA1 - perhaps this cell was assigned to the wrong cluster or maybe there was some contamination or error, but it could also just be an unusual cell that really did have higher levels of this gene!</span><span class="SCTransform"></span>
+> > 1. We can see the same expression patterns in the violin plots as we did in the UMAP feature plots. <span class="Separate-Preprocessing-Steps">For example, MALAT1 is expressed across most of the clusters while PPBP is only expressed in cluster 8.</span><span class="SCTransform">For example, S100A8 expression is highest in cluster 1.</span> We can also see that there is some expression of the top genes outside the clusters they are most highly expressed in, although usually at low levels in a small number of cells. <span class="Separate-Preprocessing-Steps">One exception we can see on this plot is a cell in cluster 1 that expressed very high levels of HLA-DQA1 - perhaps this cell was assigned to the wrong cluster or maybe there was some contamination or error, but it could also just be an unusual cell that really did have higher levels of this gene!</span><span class="SCTransform"></span>
 > > 2. The UMAP plots can give us a good overview of the data that you may find easier to picture and remember, but it can be hard to tell where one cluster ends and another begins. The violin plots can be clearer as each cluster is plotted separately and we can see the whole range of expression - <span class="Separate-Preprocessing-Steps">we would have a hard time picking out that outlier in cluster 1 with high levels of HLA-DQA1 from the UMAP plot.</span><span class="SCTranform">we can spot outliers more easily on this plot.</span>
 > {: .solution}
 {: .question}
@@ -1066,36 +1077,41 @@ Although there is a lot of information here, all we need to know for now is that
 > > <solution-title></solution-title>
 > > 1. If we search the markers table for our top genes (you can use Ctrl+F to do this but it may take time for the full dataset to load when you view it), we can see that CST3 is a positive marker for clusters 1, 5, and 7 while MALAT1 is a positive marker for clusters 0, 4 and 6. CD79A was a marker for cluster 3 while NKG7 was a marker for clusters 4 and 6. HLA-DQA1 was a marker for clusters 3 and 7 while PPBP was a marker for cluster 8. So, these top genes are differentially expressed by some of our clusters.
 > > 2. The results make sense, as we would expect the top positive and negative genes for each PC to be expressed in different clusters. The results also match up fairly well with what we saw on the UMAP and violin plots - although we might have thought that MALAT1 could be a marker for clusters 2 and 3 too as it seems to be highly expressed by them. The apparent difference in expression we saw in the plot wasn't strong enough to show up in this statistical test.
+> >
 > >    However, the top genes associated with our PCs aren't necessarily the most significant markers for our clusters (they can appear quite far down the lists) and they are often markers for more than one cluster. Again, this makes sense, because the PCA was looking for the bigger patterns across the whole dataset, while now we're looking for differences between smaller groups of cells - the clusters.
 > > 3. We could scroll down through the markers table to find the results for cluster 2, but it can be easier to filter the table instead. The {% tool [Filter](Filter1) %} can be used to filter the Markers List from `FindAllMarkers`. We can set the condition to filter on as `c7==2` since column 7 contains the cluster numbers - this will filter out only the rows that have `2` in this column.
+> >
 > >    Make sure to enter `1` in the `Number of header lines to skip` field as we don't want to cut off the header row because it doesn't have the right value in column 7!
-> >    If you then click on the {% icon galaxy-eye %} for the new output in your history, you should see from the `cluster` column that we only have markers for cluster 2. The top five markers for this cluster were:
 > >
-> > <div class="Separate-Preprocessing-Steps" markdown="1">
+> >    If you then click on the {% icon galaxy-eye %} for the new output in your history, you should see from the `cluster` column that we only have markers for cluster 2. 
+> > 
+> >    The top five markers for this cluster were:
+> >    
+> >    <div class="Separate-Preprocessing-Steps" markdown="1">
 > >
-> > > |    |      |
-> > > |----|------|
-> > > | 1  | IL32 |
-> > > | 2  | LTB  |
-> > > | 3  | CD3D |
-> > > | 4  | IL7R |
-> > > | 5  | LDHB |
-> > {: .matrix}
+> >    > |    |      |
+> >    > |----|------|
+> >    > | 1  | IL32 |
+> >    > | 2  | LTB  |
+> >    > | 3  | CD3D |
+> >    > | 4  | IL7R |
+> >    > | 5  | LDHB |
+> >    {: .matrix}
 > >
-> > </div>
+> >    </div>
 > >
-> > <div class="SCTransform" markdown="1">
+> >    <div class="SCTransform" markdown="1">
 > >
-> > > |    |        |
-> > > |----|--------|
-> > > | 1  | RPS27 |
-> > > | 2  | RPL32 |
-> > > | 3  | RPS6  |
-> > > | 4  | RPS12 |
-> > > | 5  | RPS14 |
-> > {: .matrix}
+> >    > |    |       |
+> >    > |----|-------|
+> >    > | 1  | RPS27 |
+> >    > | 2  | RPL32 |
+> >    > | 3  | RPS6  |
+> >    > | 4  | RPS12 |
+> >    > | 5  | RPS14 |
+> >    {: .matrix}
 > >
-> > </div>
+> >    </div>
 > {: .solution}
 {: .question}
 
@@ -1223,6 +1239,7 @@ We just used `FindMarkers` to run the same test on cluster 2 as `FindAllMarkers`
 > >    </div>
 > >
 > > 2. If we go back to our `FindAllMarkers` table, we'll see that these aren't exactly the same as the top five markers for cluster 5 when we compared it to all of the rest of the dataset (remember you can filter the results of `FindAllMarkers` again if you get bored of scrolling all the way down to cluster 5!). Only two of these markers are in the top five of both lists, although we can find the other genes further down in the table if we look.
+> >
 > >    We wouldn't expect to see the same results because we're now looking for differences specifically between cluster 5 and clusters 0 and 3. The genes that `FindAllMarkers` identified as differentiating cluster 5 from all of the other clusters might not be best at differentiating it specifically from clusters 0 and 3 - some of those markers could actually be expressed by all three of these clusters.
 > >
 > {: .solution}
@@ -1253,34 +1270,35 @@ We can also use other methods for DE analyis in Seurat. We can use the 'ROC' tes
 >
 > > <solution-title></solution-title>
 > > 1. The top five markers in the output table are:
+> > 
+> >    <div class="Separate-Preprocessing-Steps" markdown="1">
 > >
-> > <div class="Separate-Preprocessing-Steps" markdown="1">
+> >    > |    |       |
+> >    > |----|-------|
+> >    > | 1  | RPS12 |
+> >    > | 2  | RPS6  |
+> >    > | 3  | RPL27 |
+> >    > | 4  | RPS32 |
+> >    > | 5  | RPS14 |
+> >    {: .matrix}
 > >
-> > > |    |       |
-> > > |----|-------|
-> > > | 1  | RPS12 |
-> > > | 2  | RPS6  |
-> > > | 3  | RPL27 |
-> > > | 4  | RPS32 |
-> > > | 5  | RPS14 |
-> > {: .matrix}
+> >    </div>
 > >
-> > </div>
+> >    <div class="SCTransform" markdown="1">
 > >
-> > <div class="SCTransform" markdown="1">
+> >    > |    |       |
+> >    > |----|-------|
+> >    > | 1  | RPS27 |
+> >    > | 2  | RPL32 |
+> >    > | 3  | RPS6  |
+> >    > | 4  | RPS12 |
+> >    > | 5  | RPS14 |
+> >    {: .matrix}
 > >
-> > > |    |       |
-> > > |----|-------|
-> > > | 1  | RPS27 |
-> > > | 2  | RPL32 |
-> > > | 3  | RPS6  |
-> > > | 4  | RPS12 |
-> > > | 5  | RPS14 |
-> > {: .matrix}
-> >
-> > </div>
+> >    </div>
 > >
 > >    Many of the top markers (including all of the top five) have names starting with RP. In humans, this gene naming patterns indicates that they are ribosomal genes (encoding proteins or RNAs that form ribosomes). This cluster might represent a group of cells that are very busy making new proteins using all these ribosomes. If we expect our data to include a cell type that has lots of ribosomes, then this could be a sign that they've formed their own cluster, so we'll be happy with this result (this is actually the case here, as we'll see in the next section).
+> >
 > >    However, if we don't expect to see differences in ribosomal content between cells, then we might suspect that we've ended up with a cluster based on ribosomal RNA content rather than on cell type. In this case, we might want to go back to the QC steps. We could score the cells for `percent.ribo` in the same way we did for `percent.mt`. We could then filter out cells with unusually high proportions of ribosomal genes or regress out the variation associated with this characteristic during the scaling step. Just as when we're filtering cells by mitochondrial RNA proportions, we would need to think carefully about this - we wouldn't want to eliminate a cell type just because it has higher proportions of ribosomal genes, which is what we could end up doing if we tried it with this particular dataset.
 > >
 > {:.solution}
@@ -1483,7 +1501,7 @@ We have produced a series of UMAP plots, each coloured according to the expressi
 >
 > > <solution-title></solution-title>
 > > 1. Each cell type marker is clearly expressed at higher levels in certain parts of the plots - we don't have the same problem as we did when we plotted the top genes for PCs 1-3 and found that MALAT1 was expressed at quite high levels across the entire plot! When we compare the expression plots to the clusters we previously plotted, we can see that they match up quite well with each other. Most of the markers are expressed more in certain clusters, but there isn't always a clear boundary, especially for clusters that are close together in the plot. Some markers are associated with a single cluster, such as MS4A1 and PPBP, while others are expressed across multiple clusters.
-> > 2. Although marker expression mainly occurs in one or more clusters, there is still some expression by cells in other parts of the plot. It could be that these genes are sometimes expressed by other cell types, but these could also be cells of the same type that have simply ended up further away in the plot. It can sometimes be hard to tell which cluster these cells have been assigned to from these plots, especially when you consider that some points could be hidden behind others. Cells of the same type might have been assigned to different clusters, but there could also be a few cells that have been plotted at a distance from where the main part of their assigned cluster appears on this plot. <span class="Separate-Preprocessing-Steps" markdown="1">If we look back at the UMAP coloured by cluster, we can spot a couple of differently coloured cells at the tip of cluster 7 and by cluster 8.</span><span class="SCTransform" markdown="1">If we look back at the UMAP coloured by cluster, we can spot a couple of differently coloured cells and mixed into cluster 3 and at the tip of cluster 10.</span>
+> > 2. Although marker expression mainly occurs in one or more clusters, there is still some expression by cells in other parts of the plot. It could be that these genes are sometimes expressed by other cell types, but these could also be cells of the same type that have simply ended up further away in the plot. It can sometimes be hard to tell which cluster these cells have been assigned to from these plots, especially when you consider that some points could be hidden behind others. Cells of the same type might have been assigned to different clusters, but there could also be a few cells that have been plotted at a distance from where the main part of their assigned cluster appears on this plot. <span class="Separate-Preprocessing-Steps">If we look back at the UMAP coloured by cluster, we can spot a couple of differently coloured cells at the tip of cluster 7 and by cluster 8.</span><span class="SCTransform">If we look back at the UMAP coloured by cluster, we can spot a couple of differently coloured cells and mixed into cluster 3 and at the tip of cluster 10.</span>
 > > 3. We can distinguish between all of our clusters on the basis of which known markers they are shown to express. Each cluster expresses a unique combination of these genes, although the markers aren't only expressed in the clusters they're mainly associated with. Some of the clusters are more similar to each other, particularly those that are close together on the plot, forming part of the same larger group of cells. <span class="Separate-Preprocessing-Steps">For example, clusters 1, 5 and 7 are grouped together on the plot and all express a lot of LYZ, S100A4, and CST3.</span><span class="SCTransform">For example, clusters 1 and 6 are grouped together on the plot for and both express a lot of S100A4 and CST3.</span> Since the UMAP was created based on the PCA, which was in turn based on similarities in expression of the highly variable genes, it makes sense that clusters that are plotted closer together are more similar in expression to each other. However, we should always remember that we're only looking at a 2D plot of the first two UMAP dimensions, so we shouldn't read too much into what we see! The plot can't tell us everything about the relationships between cells and clusters.
 > {: .solution}
 {: .question}
@@ -1536,18 +1554,18 @@ Based on our table of marker genes and these plots, we know which clusters were 
 > > <solution-title></solution-title>
 > > 1. Based on the expression of the known PBMC markers, we can assign the following cell types to our clusters:
 > >
-> > > | Cell Type            | Marker Genes      | Clusters        |
-> > > | ---------------------|-------------------|-----------------|
-> > > | Naive CD4+ T         | IL7R, CCR7        |        0        |
-> > > | CD14+ Mono           | CD14, LYZ         |        1        |
-> > > | Memory CD4+ T        | IL7R, S100A4      |        2        |
-> > > | B                    | MS4A1             |        3        |
-> > > | CD8+ T               | CD8A              |        4        |
-> > > | FCGR3A+ Mono         | FCGR3A, MS4A7     |        5        |
-> > > | NK                   | GNLY, NKG7        |        6        |
-> > > | DC                   | FCER1A, CST3      |        7        |
-> > > | Platelet             | PPBP              |        8        |
-> > {: .matrix}
+> >    > | Cell Type            | Marker Genes      | Clusters        |
+> >    > | ---------------------|-------------------|-----------------|
+> >    > | Naive CD4+ T         | IL7R, CCR7        |        0        |
+> >    > | CD14+ Mono           | CD14, LYZ         |        1        |
+> >    > | Memory CD4+ T        | IL7R, S100A4      |        2        |
+> >    > | B                    | MS4A1             |        3        |
+> >    > | CD8+ T               | CD8A              |        4        |
+> >    > | FCGR3A+ Mono         | FCGR3A, MS4A7     |        5        |
+> >    > | NK                   | GNLY, NKG7        |        6        |
+> >    > | DC                   | FCER1A, CST3      |        7        |
+> >    > | Platelet             | PPBP              |        8        |
+> >    {: .matrix}
 > {: .solution}
 {: .question}
 
@@ -1561,21 +1579,21 @@ Based on our table of marker genes and these plots, we know which clusters were 
 > > <solution-title></solution-title>
 > > 1. Based on the expression of the known PBMC markers, we can assign the following cell types to our clusters:
 > >
-> > > | Cell Type            | Marker Genes      | Clusters       |
-> > > | ---------------------|-------------------|----------------|
-> > > | Memory CD4+ T        | IL7R, S100A4      |       0        |
-> > > | CD14+ Mono           | CD14, LYZ         |       1        |
-> > > | Naive CD4+ T         | IL7R, CCR7        |       2        |
-> > > | B                    | MS4A1             |       3        |
-> > > | Effector CD8+ T      | CD8A, GZMK        |       4        |
-> > > | NK                   | GNLY, NKG7        |       5        |
-> > > | FCGR3A+ Mono         | FCGR3A, MS4A7     |       6        |
-> > > | Memory CD8+ T        | CD8A, CCL5        |       7        |
-> > > | Naive CD8+ T         | CD8A, CCR7        |       8        |
-> > > | DC                   | FCER1A, CST3      |       9        |
-> > > | IFN-activated CD4+ T | IL7R, ISG15, IL32 |      10        |
-> > > | Platelet             | PPBP              |      11        |
-> > {: .matrix}
+> >    > | Cell Type            | Marker Genes      | Clusters       |
+> >    > | ---------------------|-------------------|----------------|
+> >    > | Memory CD4+ T        | IL7R, S100A4      |       0        |
+> >    > | CD14+ Mono           | CD14, LYZ         |       1        |
+> >    > | Naive CD4+ T         | IL7R, CCR7        |       2        |
+> >    > | B                    | MS4A1             |       3        |
+> >    > | Effector CD8+ T      | CD8A, GZMK        |       4        |
+> >    > | NK                   | GNLY, NKG7        |       5        |
+> >    > | FCGR3A+ Mono         | FCGR3A, MS4A7     |       6        |
+> >    > | Memory CD8+ T        | CD8A, CCL5        |       7        |
+> >    > | Naive CD8+ T         | CD8A, CCR7        |       8        |
+> >    > | DC                   | FCER1A, CST3      |       9        |
+> >    > | IFN-activated CD4+ T | IL7R, ISG15, IL32 |      10        |
+> >    > | Platelet             | PPBP              |      11        |
+> >    {: .matrix}
 > {: .solution}
 {: .question}
 
@@ -1761,11 +1779,16 @@ Comparing the two plots also shows us why the supervised approach can be faster 
 >
 > > <solution-title></solution-title>
 > > 1. The best type of plot for identifying cell types can depend on your data as well as your own personal preferences. You might find one plot easier to interpret than another. It can also be helpful to create different types of plots as some patterns may be clearer on one type while others are clearer on another. It's also good to be able to confirm your interpretation on multiple plots!
-> > UMAP plots are often used to provide a quick and memorable overview of the data, but it can be tricky to match the expression patterns to the clusters, especially given the limitations of these plots - some cells can be hidden, adjacent clusters can blend into each other, and we can't rely on the 2D plot to accurately represent all the relationships between cells and clusters.
+> >
+> >    UMAP plots are often used to provide a quick and memorable overview of the data, but it can be tricky to match the expression patterns to the clusters, especially given the limitations of these plots - some cells can be hidden, adjacent clusters can blend into each other, and we can't rely on the 2D plot to accurately represent all the relationships between cells and clusters.
+> >
 > >    Violin plots present each cluster separately, so they can make it easier to differentiate between clusters. Since every cluster is given the same amount of space on the plot, no matter how many cells it contains, violin plots can also make it easier to see what's going on with smaller clusters. We can also get a clearer idea of how much variation there is within and between clusters, although some of the points may still be hidden behind others.
+> >
 > >    Heatmaps can give us the best overview of the variation between cells as each cell is given its own little section on the plot. We can see how consistently the markers are expressed within the cluster and how common it is for cells outside the cluster to express the same genes. We can also see the overall patterns as blocks of cells with similar expression profiles, including the clusters that share similar patterns. However, heatmaps can be less useful if we want to focus on individual cells or genes, as it can be hard to pick out details.
 > > 2. We should be happy with the results of our clustering as they match up with what we already know about PBMCs. We have been able to annotate each cluster as a different cell type based on a supervised approach - and we could do the same using an unsupervised approach. The decisions we made along the way, such as the number of PCs we used and how many nearest neighbors we looked for have worked well. We even identified some subtypes of T cells, although we were able to separate out more of these when we used SCTransform.
+> >
 > >    Even though many of the top markers for the CD4NaiveT cell cluster were from ribosomal genes, we were still able to identify it as a specific cell type. It represents our population of Naive CD4+ T cells. If we search online to learn a bit more about this cell type, we'll quickly find that it is known to have lots of ribosomes, so in this case, we can be confident that the high expression of ribosomal genes in these cells is due to real biological differences between cell types, rather than a problem with our data. If we weren't able to assign a cell type to this cluster, for example because it expressed a mix of markers for different types, then we would come to a different conclusion!
+> >
 > >    If we couldn't see strong associations between our clusters and the different cell types that we expect to see in the dataset, then this would be very suspicious - did something go wrong with our experiment or analysis? We would need to go back and try to identify the problem to see if we can fix it. If the problem isn't too bad, we might just need to change some of the clustering parameters to get clusters that make biological sense - maybe we would need to use more PCs, look for more/fewer nearest neighbors, or simply change the resolution. If the problem is more serious, we might need to recheck the quality of our data or make bigger changes to the analysis.
 > {: .solution}
 {: .question}
