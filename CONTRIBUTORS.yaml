@@ -1418,6 +1418,12 @@ Lain-inrae:
     affiliations:
       - elixir-europe
 
+laurarussell:
+    name: Laura Russell
+    joined: 2025-01
+    affiliations:
+      - gbif
+
 lcooper:
     name: Laura Cooper
     joined: 2024-03
@@ -2415,6 +2421,13 @@ Sofokli5:
 sophia120199:
     name: Sophia Hampe
     joined: 2023-04
+
+sophiepamerlon:
+    name: Sophie Pamerlon
+    joined: 2025-01
+    affiliations:
+      - pndb
+      - gbif
 
 stain:
     name: Stian Soiland-Reyes
