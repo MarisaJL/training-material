@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: "Batch Correction and Integration with Seurat or Scanpy"
-zenodo_link: https://zenodo.org/records/14734574/files/Input_SeuratObject.rds
+zenodo_link: https://zenodo.org/records/14734574
 answer_histories:
   - label: "Using Seurat"
     history: https://singlecell.usegalaxy.eu/u/marisa_jl/h/batch-correction--integration-with-seurat---answer-key
