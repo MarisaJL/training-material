@@ -92,7 +92,7 @@ SCANPY GET DATA
 > <hands-on-title> Data Upload </hands-on-title>
 >
 > 1. Create a new history for this tutorial
-
+>
 > 2. Import the files from [Zenodo]({{ page.zenodo_link }})
 >
 >    ```
@@ -113,7 +113,7 @@ SCANPY GET DATA
 
 You should now have either an AnnData or SeuratObject dataset in your history. Both datasets contain the same information, but in the different formats required by the Scanpy and Seurat pipelines.
 
-We are using a single cell dataset of human Peripheral Blood Mononuclear Cells (PBMCs) that was also used in Seurat's [Integrative analysis in Seurat v5](https://satijalab.org/seurat/articles/seurat5_integration) tutorial. The original study compared the results from seven different single cell and single nuclear techniques {% cite ding2020 %}.
+We are using a single cell dataset of human Peripheral Blood Mononuclear Cells (PBMCs) that was also used in Seurat's [Integrative analysis in Seurat v5](https://satijalab.org/seurat/articles/seurat5_integration) tutorial. The original study compared the results from seven different single cell and single nuclear techniques {% cite Ding2020 %}.
 
 Let's take a look at our data before we begin the analysis to see whether we might need to perform batch correction or integration.
 
