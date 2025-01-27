@@ -2,13 +2,13 @@
 layout: tutorial_hands_on
 
 title: "Batch Correction and Integration with Seurat or Scanpy"
+subtopic: tricks
+priority: 4
 zenodo_link: https://zenodo.org/records/14734574
 answer_histories:
   - label: "Using Seurat"
     history: https://singlecell.usegalaxy.eu/u/marisa_jl/h/batch-correction--integration-with-seurat---answer-key
     date: 2025-01-21
-subtopic: tricks
-priority: 4
 questions:
 - What is the difference between batch correction and integration?
 - How can we perform batch correction or integration using the Scanpy and Seurat pipelines?
