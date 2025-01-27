@@ -7,6 +7,8 @@ answer_histories:
   - label: "Using Seurat"
     history: https://singlecell.usegalaxy.eu/u/marisa_jl/h/batch-correction--integration-with-seurat---answer-key
     date: 2025-01-21
+subtopic: tricks
+priority: 4
 questions:
 - What is the difference between batch correction and integration?
 - How can we perform batch correction or integration using the Scanpy and Seurat pipelines?
@@ -85,7 +87,7 @@ SCANPY GET DATA
 
 </div>
 
-<div class='SCTransform' markdown='1'>
+<div class='Seurat' markdown='1'>
 
 > <hands-on-title> Data Upload </hands-on-title>
 >
@@ -411,7 +413,7 @@ It's good practice to rejoin our layers now, so that those separate layers or ba
 > >
 > > 1. You might think that we should only have one layer in our dataset now, because we split it into nine layers that we have now rejoined. However, if you use {% tool Seurat Data Management %} to check, you'll see that we actually have three layers now! This is because the procesessing functions we ran (normalisation and scaling) created their own layers of data. We still have the original raw `counts` layer, but we now have a normalised layer called `data` and a scaled one called `scale.data` as well.
 > >
-> > In fact, if you run {% tool Seurat Data Management %} on the previous dataset in your history, from before we rejoined the layers, you'll see that it actually had 19 layers in it - each of the nine `counts` layers we split the dataset was normalised into its own `data` layer. We then had the `scale.data` layer too.
+> >    In fact, if you run {% tool Seurat Data Management %} on the previous dataset in your history, from before we rejoined the layers, you'll see that it actually had 19 layers in it - each of the nine `counts` layers we split the dataset was normalised into its own `data` layer. We then had the `scale.data` layer too.
 > >
 > {: .solution}
 >
@@ -506,6 +508,7 @@ Discuss what batch correction has done to the data
 
 
 > <comment-title></comment-title>
+>
 > We've seen from our plots that the batch correction has mixed the different methods together, but this alone isn't enough to convince us that the batch correction has been successful. As always with single cell analysis, we also want to confirm that the clusters we've found are biologically meaningful. The Scanpy and Seurat pipelines will always present us with clusters, but it is up to us to make sure these results make sense!
 >
 > In order to do this, we would usually take a closer look at the clusters to work out what they represent, for example by looking for clusters expressing genes that are known to be present in specific cell types. Luckily, we don't need to do this right now, because we have the annotations provided by the researchers who created this dataset. 
