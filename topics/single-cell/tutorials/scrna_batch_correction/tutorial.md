@@ -176,7 +176,13 @@ SCANPY INSPECT
 
 # Batch Correction and Integration
 
-Explain what they are and the similarities/differences...
+We will often need to perform batch correction or integration during single cell analyses. If we are working with different experimental batches, donors, conditions, or datasets, then we need to look beyond the technical differences between them. Batch correction or integration can do this by matching cells of similar types of states across batches or datasets. Effectively, we are looking for cell subpopulations that are shared across the groups.
+
+Scanpy and Seurat's integration tools will create a dimensional reduction that captures the shared sources of variation across the batches or datasets. The dimensional reduction can be used to find clusters or produce visualisations such as UMAP.
+
+The terms batch correction and integration can be used somewhat interchangably, because they both refer to the same process of looking for shared cell subpopulations across groups. The same tools are used in the same way for both procedures, so you could use the workflow described in this tutorial to perform integration as well as batch correction.
+
+The only difference is that we tend to talk about batch correction when we are working with groups produced in a single study (e.g. different experimental batches), while we would say integration when we're combining separate datasets from multiple studies.
 
 # Clustering without Batch Correction
 
@@ -194,7 +200,7 @@ SCANPY CLUSTERING
 
 In the Seurat pipeline, we can use the ability of the SeuratObject to store multiple layers to split our data up before we begin the analysis. We might do this when we have different batches or if we've combined datasets. 
 
-Splitting our data into layers means that the Seurat preprocessing tools can work on each layer separately. Each layer (in this case, each of our batches) will be normalised independently. We'll also identify the highly variable genes within each batch, rather than across the whole dataset.
+Splitting our data into layers means that the Seurat preprocessing tools can work on each layer separately. Each layer (in this case, each of our batches) will be normalised independently. We'll also identify the highly variable genes within each batch, rather than across the whole dataset. Seurat will then create a single consensus list of highly variable genes to use for the whole dataset.
 
 The other tools in the Seurat pipeline, such as `RunPCA` and `FindClusters` will still work on the entire dataset.
 
@@ -246,8 +252,11 @@ We'll follow the default Seurat pipeline here, except that we'll use `30` PCs to
 
 > <comment-title></comment-title>
 > Seurat has another option for preprocessing - rather than use the three separate functions presented below, you can use a single function called `SCTransform` to preform normalisation, identification of variable genes, and scaling all in one go. You will find this option on Galaxy's {% tool Seurat Preprocessing} tool.
+>
 > If you use `SCTransform` for preprocessing then you'll need to click the button to choose `Yes` for `Use SCT as Normalization Method` when you run `IntegrateLayers`. The `SCTransform` normalises the data in its own way, so we just need to let the tool know what to expect!
+>
 > The next step after identifying clusters would usually be to look for marker genes that are differentially expressed between clusters. If you perform integration/batch correction after using `SCTransform` then you will need to run the `PrepSCTFindMarkers` function before using tools such as `FindMarkers`. You'll find this in the {% tool Seurat Integrate %} tool.
+>
 > The rest of the workflow will be the same as shown in this tutorial, but you will end up with different results because `SCTransform` handles preprocessing in a slightly different way than the three separate tools. If you want to learn more about these differences then you can choose the SCTransform route in the [Clustering 3k PBMCs with Seurat]({% link topics/single-cell/tutorials/scrna-seurat-pbmc3k/tutorial.html %}) tutorial.
 {: .comment}
 
@@ -322,27 +331,17 @@ Now let's take a look at our results. We'll first plot a UMAP showing the cluste
 >    - {% icon param-file %} *"Input file with the Seurat object"*: `rds_out` (output of **Seurat Run Dimensional Reduction** {% icon tool %})
 >    - *"Method used"*: `Visualize Dimensional Reduction with 'DimPlot'`
 >        - *"Name of reduction to use"*: `umap.unintegrated`
->        - In *"Plot Formatting Options"*:
->            - *"Randomly shuffle order of points"*: `No`
->            - *"Convert points to raster format"*: `NULL`
->            - *"Add labels to the clusters"*: `No`
->            - *"Highlight group(s) of cells"*: `No`
->    - *"Change size of plot"*: `No`
 >
 > 2. {% tool [Seurat Visualize](toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input file with the Seurat object"*: `rds_out` (output of **Seurat Run Dimensional Reduction** {% icon tool %})
 >    - *"Method used"*: `Visualize Dimensional Reduction with 'DimPlot'`
 >        - *"Name of reduction to use"*: `umap.unintegrated`
->        - In *"Plot Formatting Options"*:
->            - *"Randomly shuffle order of points"*: `No`
->            - *"Convert points to raster format"*: `NULL`
->            - *"Add labels to the clusters"*: `No`
->            - *"Highlight group(s) of cells"*: `No`
 >        - In *"Advanced Options"*:
 >            - *"Factor to group cells by"*: `Method`
->    - *"Change size of plot"*: `No`
 >
 {: .hands_on}
+
+![Two UMAP plots showing many small and fragmented clusters of cells. Image A is coloured into 48 clusters. Image B shows many clusters as a single colour of cells analysed with the same method.](../../images/scrna_batch_correction/UMAP_Before_Seurat.png "UMAP before batch correction integration coloured by A. cluster B. Method")
 
 > <question-title></question-title>
 >
@@ -470,27 +469,17 @@ Let's see how the batch correction has changed our results. As before, we'll mak
 >    - {% icon param-file %} *"Input file with the Seurat object"*: `rds_out` (output of **Seurat Run Dimensional Reduction** {% icon tool %})
 >    - *"Method used"*: `Visualize Dimensional Reduction with 'DimPlot'`
 >        - *"Name of reduction to use"*: `umap.cca`
->        - In *"Plot Formatting Options"*:
->            - *"Randomly shuffle order of points"*: `No`
->            - *"Convert points to raster format"*: `NULL`
->            - *"Add labels to the clusters"*: `No`
->            - *"Highlight group(s) of cells"*: `No`
->    - *"Change size of plot"*: `No`
 >
 > 2. {% tool [Seurat Visualize](toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input file with the Seurat object"*: `rds_out` (output of **Seurat Run Dimensional Reduction** {% icon tool %})
 >    - *"Method used"*: `Visualize Dimensional Reduction with 'DimPlot'`
 >        - *"Name of reduction to use"*: `umap.cca`
->        - In *"Plot Formatting Options"*:
->            - *"Randomly shuffle order of points"*: `No`
->            - *"Convert points to raster format"*: `NULL`
->            - *"Add labels to the clusters"*: `No`
->            - *"Highlight group(s) of cells"*: `No`
 >        - In *"Advanced Options"*:
 >            - *"Factor to group cells by"*: `Method`
->    - *"Change size of plot"*: `No`
 >
 {: .hands_on}
+
+![Two UMAP plots showing three large groups of cells, each made up of multiple clusters. Image A is coloured as 25 clusters. Image B shows a mix of colours across all the clusters.](../../images/scrna_batch_correction/UMAP_After_Seurat.png "UMAP after batch correction coloured by A. cluster B. Method")
 
 > <question-title></question-title>
 >
@@ -517,26 +506,16 @@ Discuss what batch correction has done to the data
 
 
 > <comment-title></comment-title>
-> We've seen from our plots that the batch correction has mixed the different batches together, but this alone isn't enough to convince us that the batch correction has been successful. As always with single cell analysis, we also want to confirm that the clusters we've found are biologically meaningful. The Scanpy and Seurat pipelines 
-
-but in order to be sure that it has worked well we also need to check the biological relevance... Note that the metadata included CellType so can colour plots by that to see them ADD ANOTHER HANDSON FOR THIS?
-> Normally, it would be up to us to identify marker genes that were expressed more by specific clusters and to work out which types of cells usually express these genes... 
-> Luckily, we already have some cell type annotations that were provided - see the cell metadata - if we colour in our UMAP plots with this we should confirm that the corrected clusters make sense - they won't line up exactly with our clusters but we should see that cells of the same time are grouped together...
+> We've seen from our plots that the batch correction has mixed the different methods together, but this alone isn't enough to convince us that the batch correction has been successful. As always with single cell analysis, we also want to confirm that the clusters we've found are biologically meaningful. The Scanpy and Seurat pipelines will always present us with clusters, but it is up to us to make sure these results make sense!
+>
+> In order to do this, we would usually take a closer look at the clusters to work out what they represent, for example by looking for clusters expressing genes that are known to be present in specific cell types. Luckily, we don't need to do this right now, because we have the annotations provided by the researchers who created this dataset. 
+>
+>If you look back at the cell metadata table we created at the beginning of this tutorial, you'll see there is an annotation called `CellType`. We can colour in our UMAPs using this annotation instead of the `Method`. If our clusters make biological cell sense, we should see that these cell types are clumped together because cells of the same type should be close to each other.
+>
+> If the cell types are all blended together across the entire UMAP (as with our `Method` plot) then this would be a sign that something has gone wrong. When we are performing batch correction or integration, there is a risk that we could over-integrate the data, eliminating the biological differences we're interested in alongside the technical differences we wanted to remove. 
+>
+> The `CellType` annotation won't match up exactly with our clusters (remember we used a high resolution to make lots of clusters!) but they certainly shouldn't be scattered across the whole plot!
 {: .comment}
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 # Conclusion
 
