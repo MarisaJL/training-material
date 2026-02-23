@@ -1,3 +1,84 @@
+GTN_GTN:1771494594
+
+A	redirects/architecture-slides.md
+A	topics/dev/images/core_branches.mindmap.plantuml.svg
+A	topics/dev/images/core_files_ci.mindmap.plantuml.svg
+A	topics/dev/images/core_files_client_build.mindmap.plantuml.svg
+A	topics/dev/images/core_files_client_sources.mindmap.plantuml.svg
+A	topics/dev/images/core_files_code.mindmap.plantuml.svg
+A	topics/dev/images/core_files_code_package.mindmap.plantuml.svg
+A	topics/dev/images/core_files_code_python_2_views.mindmap.plantuml.svg
+A	topics/dev/images/core_files_datatypes.mindmap.plantuml.svg
+A	topics/dev/images/core_files_managers.mindmap.plantuml.svg
+A	topics/dev/images/core_files_managers_helpers.mindmap.plantuml.svg
+A	topics/dev/images/core_files_plugin_example.mindmap.plantuml.svg
+A	topics/dev/images/core_files_project_docs.mindmap.plantuml.svg
+A	topics/dev/images/core_files_scripts.mindmap.plantuml.svg
+A	topics/dev/images/core_files_test.mindmap.plantuml.svg
+A	topics/dev/images/core_plugins_overview.mindmap.plantuml.svg
+A	topics/dev/images/element_galaxyproject.png
+A	topics/dev/images/file_sources_access_control.plantuml.svg
+A	topics/dev/images/file_sources_add_plugin.plantuml.svg
+A	topics/dev/images/file_sources_api_flow.plantuml.svg
+A	topics/dev/images/file_sources_evolution.mermaid.svg
+A	topics/dev/images/file_sources_fsspec_hierarchy.plantuml.svg
+A	topics/dev/images/file_sources_instance_creation.plantuml.svg
+A	topics/dev/images/file_sources_interface_hierarchy.plantuml.svg
+A	topics/dev/images/file_sources_oauth_sequence.plantuml.svg
+A	topics/dev/images/file_sources_posix_deployment.plantuml.svg
+A	topics/dev/images/file_sources_pydantic_models.plantuml.svg
+A	topics/dev/images/file_sources_template_expansion.plantuml.svg
+A	topics/dev/images/file_sources_uri_resolution.plantuml.svg
+A	topics/dev/images/markdown_architecture_overview.plantuml.svg
+A	topics/dev/images/markdown_contextual_addressing.plantuml.svg
+A	topics/dev/images/markdown_design_principles.mindmap.plantuml.svg
+A	topics/dev/images/markdown_directive_processing.plantuml.svg
+A	topics/dev/images/markdown_editor_architecture.plantuml.svg
+A	topics/dev/images/markdown_frontend_components.plantuml.svg
+A	topics/dev/images/markdown_handler_pattern.plantuml.svg
+A	topics/dev/images/markdown_parser_components.plantuml.svg
+A	topics/dev/images/markdown_pdf_export.plantuml.svg
+A	topics/dev/images/markdown_store_data_flow.plantuml.svg
+A	topics/dev/images/markdown_transformation_pipeline.plantuml.svg
+A	topics/dev/images/tests-decision-tree.mermaid.svg
+A	topics/dev/tutorials/architecture-application-components/slides.html
+R100	topics/dev/tutorials/architecture/faqs/index.md	topics/dev/tutorials/architecture-client/faqs/index.md
+A	topics/dev/tutorials/architecture-client/slides.html
+A	topics/dev/tutorials/architecture-dependencies/slides.html
+A	topics/dev/tutorials/architecture-dependency-injection/slides.html
+A	topics/dev/tutorials/architecture-ecosystem/slides.html
+A	topics/dev/tutorials/architecture-file-sources/slides.html
+A	topics/dev/tutorials/architecture-files/slides.html
+A	topics/dev/tutorials/architecture-frameworks/slides.html
+A	topics/dev/tutorials/architecture-markdown/slides.html
+A	topics/dev/tutorials/architecture-plugins/slides.html
+A	topics/dev/tutorials/architecture-principles/slides.html
+A	topics/dev/tutorials/architecture-production/slides.html
+A	topics/dev/tutorials/architecture-project-management/slides.html
+A	topics/dev/tutorials/architecture-startup/slides.html
+A	topics/dev/tutorials/architecture-tasks/slides.html
+A	topics/dev/tutorials/architecture-tests/slides.html
+GTN_GTN:1771364224
+
+A	topics/.gitignore
+A	topics/imaging/images/where-to-start-bioimaging-galaxy/Microscopy_Imaging_Workflow-2026.mmd
+A	topics/imaging/images/where-to-start-bioimaging-galaxy/Microscopy_Imaging_Workflow-2026.png
+A	topics/imaging/images/where-to-start-bioimaging-galaxy/bit_depth.png
+A	topics/imaging/images/where-to-start-bioimaging-galaxy/imaging_summary_image.png
+A	topics/imaging/images/where-to-start-bioimaging-galaxy/pete_bank_imaging.png
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/.gitignore
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/data-library.yaml
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/faqs/index.md
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/tutorial.bib
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/tutorial.md
+A	topics/imaging/tutorials/where-to-start-bioimaging-galaxy/workflows/index.md
+GTN_GTN:1771339592
+
+A	shared/images/logos/UFZ-logo.png
+GTN_GTN:1771241556
+
+R099	metadata/git-mod-f9718439a4406af38cf4c5210c4dda9affa97e5d.txt	metadata/git-mod-0e078d434baa8c4f17a94d606dd020c28bb53c41.txt
+R099	metadata/git-pub-f9718439a4406af38cf4c5210c4dda9affa97e5d.txt	metadata/git-pub-0e078d434baa8c4f17a94d606dd020c28bb53c41.txt
 GTN_GTN:1771061697
 
 A	topics/imaging/images/iscc-suite/similarity_table.png
