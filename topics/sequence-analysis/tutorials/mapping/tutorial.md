@@ -211,7 +211,7 @@ The BAM file includes a lot of information about each read, particularly the qua
 >    > <tip-title> No options for reference genome? </tip-title>
 >    > If you do not see a list of options for the reference genome, double-check that you selected a reference genome during the previous step (Bowtie2).
 >    >
->    > You can also set this manually by setting the **"Database/build"** attribute on the input file to *mm10*
+>    > You can also set the **"Database/build"** attribute on the input file manually (see below). Make sure to set it to *mm10*
 >    >
 >    > {% snippet faqs/galaxy/datasets_change_dbkey.md %}
 >    >
