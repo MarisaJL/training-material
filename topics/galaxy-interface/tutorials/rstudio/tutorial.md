@@ -329,14 +329,14 @@ A list of potential interesting function related to "chi-Squared test" are liste
 > Search the R functions for the following statistical
 > functions
 >
-> 1. Student-t test
+> 1. Student t-test
 > 2. mixed linear model
 >
 > > <solution-title></solution-title>
 > >
 > > While your search results may return several tests, we list a few you might
 > > find:
-> > 1. Student-t test: `stats::TDist`
+> > 1. Student's t-Test: `stats::t.test`
 > > 2. mixed linear model: `stats::lm.glm`
 > >
 > {: .solution}
