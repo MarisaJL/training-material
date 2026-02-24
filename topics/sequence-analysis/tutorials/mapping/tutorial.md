@@ -208,8 +208,8 @@ The BAM file includes a lot of information about each read, particularly the qua
 >    - *"Use reference sequence"*: `Use a built-in genome`
 >      - *"Using genome"*: `Mouse (Mus musculus): mm10 Full`
 >
->    > <tip-title> No options for reference genome? </tip-title>
->    > If you do not see a list of options for the reference genome, double-check that you selected a reference genome during the previous step (Bowtie2).
+>    > <tip-title> No options for reference sequence? </tip-title>
+>    > If you do not see a list of options for the reference sequence, double-check that you selected a reference genome during the previous step (Bowtie2).
 >    >
 >    > You can also set the **"Database/build"** attribute on the input file manually (see below). Make sure to set it to *Mouse (Mus musculus): mm10 Full*
 >    >
