@@ -1,5 +1,6 @@
 ---
 layout: event
+redirect_from: events/2025-05-18-galaxy-academy
 
 title: Galaxy Training Academy 2026
 description: |
@@ -153,7 +154,7 @@ Do you want to learn how to use Galaxy, an open source data analysis platform? T
 
 We provide you with training materials which you can study at your own pace and on your own time throughout the week. A program will be posted here closer to the event start.
 
-On the first day, you can make yourself familiar with the Galaxy platform. In the next days, you can learn about Proteomics, Assembly, Machine learning,  and other tracks that will be defined as we get closer to the event. 
+On the first day, you can make yourself familiar with the Galaxy platform. In the next days, you can learn about Proteomics, Assembly, Machine learning,  and other tracks that will be defined as we get closer to the event.
 
 **Course format**
 
