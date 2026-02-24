@@ -1,6 +1,6 @@
 ---
 layout: event
-redirect_from: events/2026-05-18-galaxy-academy
+redirect_from: events/2025-05-18-galaxy-academy
 
 title: Galaxy Training Academy 2026
 description: |
